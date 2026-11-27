@@ -41,3 +41,17 @@ Work is phase-gated. Do not start the next phase until the current phase has bee
 - Work on task-specific branches and review diffs.
 - Do not force-push or rewrite shared history.
 - Do not commit credentials, API keys, tokens, or secret-bearing environment files.
+
+## Local development
+
+**Toolchain:** Node.js 24.x (Node.js 26.x is also within the supported engine range) and pnpm 12.19.0.
+
+```bash
+corepack enable
+corepack prepare pnpm@12.19.0 --activate
+pnpm install
+pnpm lint
+pnpm format:check
+```
+
+The initial P3-01 bootstrap does not yet include `pnpm-lock.yaml`. The first local `pnpm install` will generate it; commit that generated lockfile before treating installs as reproducible. The CI workflow currently uses `--no-frozen-lockfile` only as a temporary bootstrap step. Once the lockfile is committed, change CI to `pnpm install --frozen-lockfile`.
