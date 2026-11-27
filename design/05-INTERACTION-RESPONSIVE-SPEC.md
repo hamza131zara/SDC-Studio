@@ -236,3 +236,37 @@ The prototype may use static sample content. It must be labelled as prototype da
 - Workspace context does not leak across projects.
 - Responsive layouts preserve task clarity and readability.
 - Accessibility and reduced-motion behavior are defined.
+
+
+## 16. Design workspace interactions
+
+- The design stage list shows Draft, Running, Needs review, Approved, Blocked and Not started.
+- Selecting a stage opens its artifacts and acceptance checklist.
+- Operator can comment on a screen/frame or a specific finding.
+- Request revision must identify the target screen/component and desired outcome.
+- Theme and density selectors are independent:
+  - Theme values: Light and Dark.
+  - Initial theme follows the operating-system preference unless the operator chooses a theme.
+  - A manual selection is remembered and restored on subsequent visits.
+  - Density defaults to Comfortable, with Compact available.
+  - Density changes spacing and information density without changing the semantic design tokens or hiding critical information.
+- Comfortable/Compact may be changed globally; workspace-specific density override can be considered only if it remains predictable and accessible.
+- Design versions are immutable snapshots or versioned revisions.
+- Prototype preview is labelled as design/prototype, not a real deployed app.
+- An external Figma/Penpot connection displays its actual permission state and available actions.
+- If external authoring is unavailable, the operator can continue in the native design workspace.
+
+## 17. Design generation and review states
+
+| Stage | UI status | Operator action |
+|---|---|---|
+| Brief | Draft / Ready for review | Confirm product goals and constraints |
+| UX structure | Generating / Ready | Review screen inventory and journey coverage |
+| Wireframes | Draft / Ready | Request layout changes |
+| Visual system | Draft / Ready | Confirm theme, typography and token direction |
+| Screens | Generating / Needs review | Inspect screen composition and responsive variants |
+| Prototype | Building / Ready | Test main journeys |
+| Critique | Running / Findings ready | Review evidence-backed findings |
+| Approval | Awaiting owner / Approved / Rejected | Accept or request revisions |
+| Handoff | Ready / Incomplete | Confirm implementation package |
+
