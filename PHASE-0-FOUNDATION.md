@@ -164,6 +164,47 @@ The router may select models by task capability, latency, availability, and user
 - Record provider/model, usage, latency, errors, and fallback decisions.
 - Never describe a limited free tier as unlimited or guaranteed.
 
+### 3.6 Proposed repository folder structure
+
+Use a TypeScript monorepo so the web application and local execution runner can evolve together while sharing typed contracts. The initial structure is a logical target, not a request to create all directories during Phase 0.
+
+```text
+sdc-studio/
+├── apps/
+│   ├── web/                    # Next.js user interface and backend-facing routes
+│   └── runner/                 # Local agent runner and isolated workspace lifecycle
+├── packages/
+│   ├── agent-core/             # Orchestration state machine, task planning, agent roles
+│   ├── ai-gateway/             # Provider adapters, model catalog, routing and quotas
+│   ├── github-integration/     # GitHub App and repository operations
+│   ├── tool-contracts/         # Typed contracts and schemas for agent tools
+│   ├── execution/              # Workspace, command and sandbox abstractions
+│   ├── browser-qa/             # Playwright sessions, diagnostics and screenshot evidence
+│   └── shared/                 # Shared types, validation and utilities
+├── docs/                       # Formal Phase 1 documentation; create in Phase 1
+├── tests/                      # Cross-package integration and acceptance tests
+├── .github/
+│   └── workflows/              # CI workflows, added when CI is implemented
+├── .gitignore
+├── package.json
+├── pnpm-workspace.yaml
+├── tsconfig.base.json
+├── README.md
+└── PHASE-0-FOUNDATION.md
+```
+
+Folder rules:
+- `apps/web` owns the browser-facing product experience; it must not execute untrusted project commands inside the web process.
+- `apps/runner` owns local execution lifecycle and communicates through typed, authenticated contracts.
+- `packages/agent-core` coordinates work but does not directly bypass the tool gateway.
+- `packages/ai-gateway` is the only model-provider integration boundary.
+- `packages/github-integration` centralizes repository access and permission checks.
+- `packages/execution` defines sandbox boundaries; project code runs outside the platform control plane.
+- `packages/browser-qa` captures browser evidence and test results from isolated sessions.
+- `packages/shared` must remain free of secrets and environment-specific side effects.
+- Formal workflows, detailed API contracts and exact module dependency rules belong to Phase 1 documentation.
+- Do not create empty packages or implement these modules during Phase 0.
+
 ## 4. Security and trust model
 
 ### 4.1 Trust boundaries
