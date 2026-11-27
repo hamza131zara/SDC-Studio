@@ -47,7 +47,7 @@ Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canoni
 | P2-04 Chat experience | Draft prepared |
 | P2-05 Project workspace | Draft prepared |
 | P2-06 Execution transparency | Draft prepared |
-| P2-07 Settings and integrations | Draft prepared |
+| P2-07 Settings and integrations | Project-scoped multi-tool/API management specified; prototype validation pending |
 | P2-08 Design system | Draft prepared; theme and density preference recorded |
 | P2-09 Interaction prototype | Canonical prototype brief prepared; interactive prototype pending |
 | P2-10 Design review and acceptance | Pending owner review |
