@@ -1,9 +1,9 @@
 # SDC Studio — Documentation Index
 
-**Status:** Phase 1 documentation draft for owner review  
-**Approved foundation:** Phase 0 is merged into main  
-**Active branch:** phase-1/documentation  
-**Active PR:** #2 — Phase 1: SDC Studio documentation
+**Status:** Phase 1 accepted and merged; Phase 2 UI/UX Design active  
+**Approved baseline:** Phase 0 and Phase 1 are merged into main  
+**Current branch:** phase-2/ui-ux-design  
+**Phase 1 PR:** #2 — merged
 
 This folder is the detailed reference set for requirements, workflows, architecture, implementation planning, and ongoing project continuity.
 
@@ -47,9 +47,7 @@ The approved Phase 0 baseline remains at the repository root: [PHASE-0-FOUNDATIO
 
 ## Phase boundary
 
-Phase 1 formalizes the approved Phase 0 foundation. It does not authorize UI design, application implementation, provider integration, sandbox implementation, or deployment implementation. Those belong to later approved phases.
-
-Phase 2 — UI/UX Design begins only after Phase 1 documentation is reviewed, accepted, and merged.
+Phase 1 formalized the approved Phase 0 foundation and is accepted/merged. Phase 2 — UI/UX Design is now active. Application implementation, provider integration, runner, preview and deployment remain later phases.
 
 ## Change control
 
