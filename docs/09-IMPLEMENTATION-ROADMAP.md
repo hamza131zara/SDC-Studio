@@ -110,9 +110,11 @@ The statuses above are a record of the repository state at the date shown in PRO
 
 **Next phase after acceptance:** Phase 2 — UI/UX Design. Do not start it before the Phase 1 merge.
 
-## 5. Phase 2 — UI/UX Design (not started)
+## 5. Phase 2 — UI/UX Design (in progress)
 
 **Objective:** Define the actual product experience before coding the interface.
+
+**Current branch:** phase-2/ui-ux-design. The information architecture, user journeys, screen wireframe specification, visual design system, interaction/responsive specification, and design acceptance criteria are drafted. The clickable prototype and owner design approval remain pending.
 
 ### Work items
 
@@ -131,9 +133,24 @@ The statuses above are a record of the repository state at the date shown in PRO
 
 **Dependencies:** Phase 1 accepted documentation.
 
-**Exit:** Main screens and key interactions are approved; responsive and error/empty/loading states are specified; design handoff is ready.
+### Current work-item status
 
-**Not part of Phase 2:** Building backend APIs, connecting live AI providers, implementing GitHub, or creating the actual execution runner.
+| ID | Status | Evidence / next action |
+|---|---|---|
+| P2-01 | Draft prepared | design/01-INFORMATION-ARCHITECTURE.md |
+| P2-02 | Draft prepared | design/02-USER-JOURNEYS.md |
+| P2-03 | Draft prepared | design/03-SCREEN-WIREFRAMES.md |
+| P2-04 | Draft prepared | Composer, message stream, modes, models and autonomy states specified |
+| P2-05 | Draft prepared | Project workspace tabs and screen layouts specified |
+| P2-06 | Draft prepared | Activity, tool events and approval states specified |
+| P2-07 | Draft prepared | Provider/GitHub settings and integration screens specified |
+| P2-08 | Draft prepared | design/04-DESIGN-SYSTEM.md |
+| P2-09 | Pending | Create clickable prototype for primary journeys |
+| P2-10 | Pending owner review | Review theme/branding assumptions and accept complete package |
+
+**Exit:** Main screens and key interactions are approved; responsive and error/empty/loading states are specified; the clickable design prototype and design handoff are ready; owner approves Phase 2.
+
+**Not part of Phase 2:** Building backend APIs, connecting live AI providers, implementing GitHub, creating the actual execution runner, or writing production application code.
 
 ## 6. Phase 3 — Application Shell (not started)
 
