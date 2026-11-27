@@ -130,6 +130,7 @@ The statuses above are a record of the repository state at the date shown in PRO
 | P2-08 | Design system | Typography, colors, spacing, components, states and responsive rules |
 | P2-09 | Interaction prototype | Clickable design covering primary workflows |
 | P2-10 | Design review and acceptance | Owner-approved designs and recorded exceptions |
+| P2-11 | AI design workflow and integration architecture | Design-agent pipeline, native artifact model, Figma/Penpot adapter strategy, visual review and design-to-development handoff |
 
 **Dependencies:** Phase 1 accepted documentation.
 
@@ -146,7 +147,8 @@ The statuses above are a record of the repository state at the date shown in PRO
 | P2-07 | Draft prepared | Provider/GitHub settings and integration screens specified |
 | P2-08 | Draft prepared | design/04-DESIGN-SYSTEM.md |
 | P2-09 | Pending | Create clickable prototype for primary journeys |
-| P2-10 | Pending owner review | Review theme/branding assumptions and accept complete package |
+| P2-10 | Pending owner review | Review theme/branding and accept complete package |
+| P2-11 | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; owner review pending |
 
 **Exit:** Main screens and key interactions are approved; responsive and error/empty/loading states are specified; the clickable design prototype and design handoff are ready; owner approves Phase 2.
 
