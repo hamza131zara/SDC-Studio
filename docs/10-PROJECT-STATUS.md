@@ -106,7 +106,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | Owner review | **Accepted** | Owner approved Phase 1 on 2026-11-27 |
 | PR #2 merge | **Done** | Squash merge commit b3ebadd4065400b4155c15469b016520a692d987 |
 
-## 7. Current next action
+## 8. Current next action
 
 **Immediate next action:** Review the Phase 2 design draft, confirm or adjust the visual direction (dark/light default, brand accent, density), then complete the clickable prototype and design review. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
