@@ -53,11 +53,16 @@ Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canoni
 | P2-10 Design review and acceptance | Pending owner review |
 | P2-11 AI design workflow and integration architecture | Draft prepared; Product Design app workflow recorded |
 
-## Design assumptions requiring owner review
+## Confirmed owner preferences
+
+- Both Light and Dark themes; follow the OS preference on first visit and remember the last manual selection.
+- Comfortable workspace density by default; Compact is optional and uses one global setting.
+- Theme and density are independent preferences.
+
+## Remaining design assumptions for review
 
 - Desktop-first composition because the primary workflow involves code, diffs, terminal, and preview side-by-side.
 - Responsive tablet/mobile support for conversation, task status, reports, and approvals; full multi-pane development is optimized for desktop.
-- Both themes are available; the first visit follows the OS preference and subsequent visits remember the last manual theme selection.
 - Neutral visual foundation; final brand accent and logo can be aligned with SDC branding during owner review.
 - One operator-focused private product; no public signup, billing, team administration, or customer tenancy screens.
 
@@ -77,7 +82,7 @@ Full tool-access notes and references are in [07-DESIGN-AGENT-ARCHITECTURE.md](.
 ## Remaining Phase 2 work
 
 - Connect Penpot MCP in a supported MCP client (or use Product Design in ChatGPT Work mode) and create the clickable prototype covering the primary journeys listed in the interaction specification.
-- Review the provisional visual direction and brand accent with the owner.
+- Review the provisional visual direction, final SDC brand accent/logo and workspace navigation choice with the owner.
 - Validate the complete design package against the acceptance checklist.
 - Record approved/deferred decisions and obtain owner acceptance.
 
