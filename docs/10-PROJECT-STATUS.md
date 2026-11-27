@@ -124,7 +124,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | P2-04 — Chat experience | Draft prepared | design/03-SCREEN-WIREFRAMES.md; design/05-INTERACTION-RESPONSIVE-SPEC.md |
 | P2-05 — Project workspace | Draft prepared | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
 | P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
-| P2-07 — Settings and integrations | Expanded design requirement recorded | Project Settings → Integrations & APIs for multi-tool setup, protected credentials, connection tests/status, scopes and usage visibility; wireframe/prototype updates pending verification |
+| P2-07 — Settings and integrations | Requirements specified; prototype validation pending | Project Settings → Integrations & APIs for multi-tool setup, protected credentials, Test Connection, Check Status, explicit Run Sample Request, project scopes and auditable usage |
 | P2-08 — Design system | Owner preferences confirmed; visual proposal pending review | Both themes with OS-first/manual persistence; Comfortable default, Compact optional; brand accent and workspace navigation remain open |
 | P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; preferred free-first canvas is Penpot after its MCP is connected; Product Design requires Work mode |
 | P2-10 — Design review and acceptance | **Pending prototype review** | Review editable screens, prototype, final SDC branding and workspace navigation; theme/density decisions are confirmed |
@@ -204,6 +204,8 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | AI design workflow and Figma/Penpot integration architecture drafted | design/07-DESIGN-AGENT-ARCHITECTURE.md |
 | 2026-11-27 | SDC Studio prototype design brief prepared for Product Design app | design/08-PROTOTYPE-DESIGN-BRIEF.md |
 | 2026-11-27 | Product Design app connection confirmed by owner | Use for brief refinement, flow audit and interactive prototype assistance; not an SDC Studio runtime integration |
+| 2026-11-27 | Owner clarified that multiple external tools/APIs must be configured per project, with protected credentials, test/status checks and auditable calls | Project Settings → Integrations & APIs; design/01 through design/08 |
+
 
 ## 12. Status maintenance procedure
 
