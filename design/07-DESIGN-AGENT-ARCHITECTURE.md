@@ -375,3 +375,35 @@ Later implementation phases may build the native design workspace, design artifa
 - Visual and accessibility review produces evidence-backed findings.
 - Owner approval is required before handoff is marked accepted.
 - The architecture has a clear boundary between Phase 2 design specification and later implementation.
+
+
+## 15. Connected Product Design app — assisted design workflow
+
+**Connection state:** The owner confirmed that the ChatGPT **Product Design** app has been successfully connected for this design request.
+
+The Product Design app is intended to assist with:
+- Confirming and refining the product design brief.
+- Exploring alternative product/UI directions.
+- Auditing user flows and screen structure.
+- Prototyping from an existing live URL when one exists.
+- Turning static screenshots into interactive prototype experiences.
+
+### How SDC Studio should use this capability
+
+For the current Phase 2:
+1. Use the accepted Phase 0/1 documents and [Prototype Design Brief](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canonical input.
+2. Ask Product Design to challenge unclear requirements and identify missing journeys before visual generation.
+3. Explore a small number of materially different design directions; select one based on usability, hierarchy, accessibility and developer workflow—not novelty.
+4. Review its flow audit against the approved IA and acceptance criteria.
+5. Use its prototype capabilities where available. At this stage there is no live SDC Studio URL, so a live-URL prototype flow cannot be used yet; begin from the design brief and editable screen/wireframe references.
+6. Preserve approved decisions and record any changes in the design version/decision record.
+7. Bring the reviewed output back into the Phase 2 package and owner approval process.
+
+### Important boundaries
+
+- Product Design is a ChatGPT design aid; its connection does not automatically install an API or runtime dependency in the SDC Studio application.
+- Do not assume the Product Design app exposes an API that SDC Studio can call. A future native integration requires a documented, supported API and owner approval.
+- Do not treat generated screens or prototype suggestions as accepted design until the operator reviews them.
+- Preserve editable screen structure and component/tokens where the design tool supports them. Static screenshots are references, not the canonical source design.
+- No live project URL is available until later implementation phases; the current design prototype must use clearly labelled sample data.
+
