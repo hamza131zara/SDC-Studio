@@ -243,11 +243,12 @@ Keep animations short and restrained. Avoid background effects, looping decorati
 
 ## 14. Density modes
 
-Propose two workspace density preferences:
-- **Comfortable:** more breathing room for chat, reports, and first-time use.
-- **Compact:** higher information density for code, activity, and terminal surfaces.
+The owner-selected baseline is **Comfortable**. **Compact** remains available as an optional global workspace preference.
 
-Density must not reduce minimum target sizes or accessibility.
+- **Comfortable (default):** more breathing room for chat, reports, file rows, settings and activity.
+- **Compact (optional):** tighter row and section spacing to show more files, tool events, test rows and terminal output.
+
+Use one predictable global density selection across workspace surfaces. Individual surfaces may adapt their layout to the viewport and task, but Phase 2 does not introduce independent per-panel density overrides. Density must not reduce text readability, minimum target sizes, focus visibility, or accessibility.
 
 ## 15. Design tokens handoff
 
@@ -263,12 +264,16 @@ The actual CSS variables/tailwind configuration are implementation work and must
 
 ## 16. Owner review items
 
-- Confirm dark theme as default or choose light theme.
-- Confirm SDC brand accent/logo direction.
-- Confirm preferred density default.
-- Confirm whether the project workspace tabs should be horizontal tabs or a secondary navigation rail.
+**Resolved owner decisions:**
+- Both Light and Dark themes are required. First visit follows the operating-system preference; a manual selection is remembered and restored on later visits.
+- Comfortable is the default workspace density. Compact remains an optional density preference.
 
-Until reviewed, these are design proposals and do not change the Phase 0 product foundation.
+**Still requiring owner review:**
+- Final SDC brand accent/logo direction.
+- Whether project workspace navigation should use horizontal tabs or a secondary navigation rail.
+- Final visual direction and the clickable prototype before Phase 2 acceptance.
+
+These visual decisions remain within the Phase 2 design scope and do not change the Phase 0 product foundation.
 
 
 ## 17. Owner-selected defaults
