@@ -165,6 +165,8 @@ Behavior:
 - A platform detail view lists its supported operations, authentication methods, required scopes, data sent, status/test capability, and relevant usage/cost notes.
 - Offer API-key input only when that platform adapter supports API-key authentication. Other connectors may require OAuth, a provider token/PAT, or a local service endpoint.
 - Credentials are entered into a masked field. After save, never reveal the full credential.
+- Store them encrypted at rest in protected server-side secret storage; keep only a secret reference in project configuration.
+- After save, clear the credential input and retain only a masked “credential configured” indicator. Never put the raw value in browser persistence, telemetry or logs.
 - Validate required fields and clearly explain format/authentication errors without echoing the secret.
 - New credentials are project-scoped by default. Reusing a credential from an owner/account vault requires explicit attach-to-project confirmation and a scope summary.
 
