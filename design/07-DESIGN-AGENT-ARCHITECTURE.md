@@ -377,33 +377,125 @@ Later implementation phases may build the native design workspace, design artifa
 - The architecture has a clear boundary between Phase 2 design specification and later implementation.
 
 
-## 15. Connected Product Design app — assisted design workflow
+## 15. Product Design capability — assisted design workflow
 
-**Connection state:** The owner confirmed that the ChatGPT **Product Design** app has been successfully connected for this design request.
+**Availability:** Product Design is installed in ChatGPT. Its full workflow is designed for ChatGPT Work mode; the installed skill instructions say standard Chat mode is not supported for the full Product Design workflow.
 
-The Product Design app is intended to assist with:
+Use Product Design in Work mode to assist with:
 - Confirming and refining the product design brief.
 - Exploring alternative product/UI directions.
 - Auditing user flows and screen structure.
-- Prototyping from an existing live URL when one exists.
+- Prototyping from a live URL when one exists.
 - Turning static screenshots into interactive prototype experiences.
 
-### How SDC Studio should use this capability
-
 For the current Phase 2:
-1. Use the accepted Phase 0/1 documents and [Prototype Design Brief](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canonical input.
-2. Ask Product Design to challenge unclear requirements and identify missing journeys before visual generation.
-3. Explore a small number of materially different design directions; select one based on usability, hierarchy, accessibility and developer workflow—not novelty.
-4. Review its flow audit against the approved IA and acceptance criteria.
-5. Use its prototype capabilities where available. At this stage there is no live SDC Studio URL, so a live-URL prototype flow cannot be used yet; begin from the design brief and editable screen/wireframe references.
-6. Preserve approved decisions and record any changes in the design version/decision record.
-7. Bring the reviewed output back into the Phase 2 package and owner approval process.
+1. Use the accepted Phase 0/1 documents and [Prototype Design Brief](./08-PROTOTYPE-DESIGN-BRIEF.md) as canonical input.
+2. Use Product Design in Work mode to challenge unclear requirements and explore visual directions.
+3. Review any flow audit against the approved information architecture and acceptance criteria.
+4. Use prototype capabilities where available. There is no live SDC Studio URL yet, so begin from the brief and editable design references.
+5. Preserve approved decisions and record changes in the design version/decision record.
+6. Bring reviewed output back into the Phase 2 package and owner approval process.
 
-### Important boundaries
+Boundaries:
+- Product Design is a ChatGPT design aid; it is not an SDC Studio runtime dependency.
+- Do not assume it exposes a callable API for SDC Studio.
+- Generated screens/prototypes are proposals until the owner accepts them.
+- Preserve editable structure/components/tokens where supported; static screenshots are references, not the canonical design.
+- Prototype data must be clearly labelled as sample data.
 
-- Product Design is a ChatGPT design aid; its connection does not automatically install an API or runtime dependency in the SDC Studio application.
-- Do not assume the Product Design app exposes an API that SDC Studio can call. A future native integration requires a documented, supported API and owner approval.
-- Do not treat generated screens or prototype suggestions as accepted design until the operator reviews them.
-- Preserve editable screen structure and component/tokens where the design tool supports them. Static screenshots are references, not the canonical source design.
-- No live project URL is available until later implementation phases; the current design prototype must use clearly labelled sample data.
+## 16. Current design-tool access and recommended workflow
 
+**Snapshot date:** 2026-11-27. Recheck account permissions, free plans, and quotas before relying on any external service.
+
+### 16.1 Figma — installed, but current seat is view-only
+
+The ChatGPT Figma app is installed and connected. The authenticated Figma account lookup returned two Starter team memberships, both with a **View** seat.
+
+Figma's published seat matrix states that View seats can view/comment but cannot edit Figma Design files. Figma's remote MCP guide states that writing to the canvas outside Drafts requires a Full seat. Figma Make can be tried in Drafts by View-seat users, but Figma says Make files created by View seats cannot be shared without upgrading to a Full seat.
+
+Therefore:
+- Do not claim that SDC Studio's Figma Design screens have been authored or changed through the current View-seat connection.
+- Use Figma for reading/inspection where permitted.
+- Treat Figma Make-in-Drafts as a possible private exploration path only; verify current feature access and AI credit balance first.
+- Re-evaluate Figma canvas-writing if the owner gets Full-seat/edit permissions or a new eligible workspace.
+
+References:
+- [Figma seat comparison](https://help.figma.com/hc/en-us/articles/360039960434-Compare-and-manage-seats-in-Figma)
+- [Figma MCP server: write to canvas and access](https://developers.figma.com/docs/figma-mcp-server/)
+- [Figma Make access](https://help.figma.com/hc/en-us/articles/31722591905559-Figma-Make-FAQs)
+
+### 16.2 Penpot — preferred free-first editable UI canvas to evaluate
+
+Penpot is the preferred first option to evaluate for editable UI design without purchasing a Figma Full seat.
+
+Reasons:
+- Penpot describes its Professional cloud plan as free and fully featured for core design work.
+- Penpot is open source and supports UI design, interactive prototypes, design systems, tokens, components and variants.
+- Penpot publishes an official MCP server that can read and modify Penpot file structure, including pages, layers, components, styles and tokens.
+
+Important implementation boundary:
+- The Penpot MCP server is not currently connected as a tool in this ChatGPT session.
+- Do not claim it is connected or create/modify Penpot files until the owner enables the Penpot MCP server and connects an MCP-compatible client.
+- Verify current cloud storage, team limits, and server capabilities during setup; don't promise feature parity with Figma.
+
+Suggested setup:
+1. Create/sign in to a free Penpot account at [design.penpot.app](https://design.penpot.app).
+2. Enable the MCP server under the Penpot account integrations.
+3. Open a Penpot design file and connect the Penpot MCP plugin to that file.
+4. Connect the returned remote MCP endpoint/session to a supported MCP client, or use Penpot's documented local setup.
+5. Begin read-only (list pages, inspect components/tokens) before allowing edits.
+6. Build the SDC Studio design system and key screens as native editable objects.
+
+Official references:
+- [Penpot pricing](https://penpot.app/pricing)
+- [Penpot MCP documentation](https://help.penpot.dev/mcp/)
+- [Penpot open-source platform](https://penpot.app/)
+
+### 16.3 ChatGPT Product Design — installed; full workflow requires Work mode
+
+The Product Design capability is available in the ChatGPT plugin environment, but its installed workflow instructions state that full ideation/prototyping workflows are not run in standard Chat mode. Use ChatGPT **Work mode** for the full Product Design experience.
+
+Use it for:
+- Visual direction exploration.
+- Product brief refinement.
+- User-flow audits and UX critique.
+- Image/screenshot-based ideation.
+- Interactive prototype workflows where supported.
+
+Do not treat it as a guaranteed Figma editor or a permanent SDC Studio runtime dependency. A generated prototype remains a proposal until the owner reviews it.
+
+### 16.4 MagicPath — optional, not the current free-first dependency
+
+MagicPath is installed and its tool connection is available. The latest account context returned zero available credits and no free plan available for this account. Therefore, do not plan the current Phase 2 deliverable around MagicPath AI generation unless the owner later confirms available credits or a plan.
+
+MagicPath remains an optional alternative for multi-screen design exploration, collaborative canvas work and code export if access/credits become available.
+
+Reference: [MagicPath documentation](https://www.magicpath.ai/documentation).
+
+### 16.5 Canva — supporting visual assets, not the primary UI design source
+
+Canva is installed and useful for brand collateral, social graphics, presentations, diagrams and marketing assets. It is not the default source of truth for complex application screen hierarchies, component variants, design tokens, or code handoff.
+
+### 16.6 tldraw — architecture and flow diagrams
+
+The tldraw ChatGPT app has been suggested for connection. It is intended for drawing and diagramming with an AI agent on a canvas.
+
+Use it for:
+- System/context diagrams.
+- Agent orchestration and tool-flow diagrams.
+- User journey and decision-flow sketches.
+- Architecture review workshops.
+
+It is optional for Phase 2 and is not a replacement for a UI design system or clickable product prototype. Do not assume it is connected until the owner completes the app connection.
+
+### 16.7 Recommended working method for SDC Studio
+
+1. **GPT/architecture work:** Translate requirements into user journeys, IA, screen inventory, design constraints, design tokens, and acceptance criteria.
+2. **Product Design in Work mode:** Explore directions, challenge flows, and critique visual hierarchy/accessibility.
+3. **Penpot as the free-first editable canvas:** Build the approved component system, screens and prototype when its MCP connection is ready.
+4. **Figma as an optional professional destination:** Use it when Full-seat/edit access becomes available or when the owner selects a suitable editable draft workflow.
+5. **tldraw for architecture diagrams:** Keep system and agent diagrams distinct from final UI screen designs.
+6. **Owner review:** Select the final direction and approve the prototype.
+7. **Design handoff:** Store the approved design URL, frame IDs, tokens, interaction notes and acceptance mapping in the repository before Phase 3.
+
+No single plugin makes GPT a professional designer by itself. Quality depends on strong requirements, reference research, visual alternatives, a real editable design canvas, repeated critique, usability/accessibility checks, and owner approval.
