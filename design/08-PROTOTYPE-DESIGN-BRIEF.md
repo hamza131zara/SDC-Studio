@@ -97,12 +97,26 @@ Create the following as separate editable frames/screens, not one flattened imag
 - Actual test results and browser evidence.
 - Warnings, untested areas, unresolved issues and direct next action.
 
-### Screen 8 — Models / Integrations Settings
-- Provider cards with configured/unconfigured status.
-- Model choices and capability hints.
-- GitHub App connection state and selected repository scope.
-- Protected credentials displayed only as configured/masked state.
-- Do not show fake secrets or real tokens.
+### Screen 8 — Project Settings / Integrations & APIs
+
+Show a clearly project-scoped settings page, opened from the active project's header/menu. Include:
+
+- Project identity and settings navigation.
+- Searchable integration catalog grouped by AI/model providers, development/design tools, source control, testing/browser, hosting/deployment, research/search and other supported tools.
+- Platform detail panel explaining purpose, supported operations, accepted authentication methods, required scopes, data sent, status-test availability and usage/cost notes.
+- Add/configure flow with masked API-key field where supported; show OAuth/token/local endpoint alternatives only where appropriate for the selected adapter.
+- Configured project integration cards with platform, configured/verified/disabled status, capabilities/scopes, last checked time, and provider-reported quota/usage where available.
+- Actions for Configure, Test Connection, Check Status, Enable/Disable for this project, Replace Credential, Reauthorize and Remove Project Binding.
+- Clear “Configured — not verified” state after a key is saved but no successful test has occurred.
+- Show “Test/status check unsupported” where the adapter cannot safely verify.
+- A potentially billable sample API/model request must be a separate explicit action with a cost/usage warning.
+- Never display a real API key or invite the operator to paste a real secret into the prototype. Use clearly fictional masked sample values and simulated statuses only.
+
+### Screen 9 — Global Settings & Appearance
+- Account/session and application-wide defaults.
+- Both Light and Dark themes; OS preference before manual selection, then remember last manual choice.
+- Comfortable density as default, Compact as optional global setting.
+- No project API key or project tool connection form here; those belong in Screen 8.
 
 ## 5. Visual direction
 
@@ -168,7 +182,9 @@ Create prototype links for these journeys:
 7. Open QA diagnostics and inspect a failed request.
 8. Review and reject an approval request, then show the task as blocked or awaiting alternative.
 9. Open final task report.
-10. Open settings and switch Dark/Light and Comfortable/Compact.
+10. Open Global Settings and switch Dark/Light and Comfortable/Compact.
+11. Open a project's Settings → Integrations & APIs, select a platform, inspect its auth options, configure a fictional masked credential, run a simulated safe connection check, and inspect Connected / Failed / Not supported status variants.
+12. Show that the same platform can be configured independently for a second project, without leaking or cross-attaching credentials.
 
 Use believable sample content such as a fictional "Agency Website Refresh" project. Clearly distinguish sample prototype data from actual repository/tool data.
 
@@ -201,6 +217,7 @@ Use believable sample content such as a fictional "Agency Website Refresh" proje
 
 - No production code.
 - No backend or database.
+- No real API key, real provider credential, real third-party API call, or billable request. All integration actions and statuses in the prototype are simulated.
 - No real GitHub integration.
 - No live AI model calls.
 - No actual terminal execution.
