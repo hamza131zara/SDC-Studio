@@ -147,7 +147,7 @@ The statuses above are a record of the repository state at the date shown in PRO
 | P2-07 | Draft prepared | Provider/GitHub settings and integration screens specified |
 | P2-08 | Draft prepared | design/04-DESIGN-SYSTEM.md |
 | P2-09 | Brief ready; prototype pending | Connect Penpot MCP in a supported MCP client, or use Product Design in ChatGPT Work mode; create editable screens and clickable user flows from design/08-PROTOTYPE-DESIGN-BRIEF.md |
-| P2-10 | Pending owner review | Review theme/branding and accept complete package |
+| P2-10 | Pending prototype/visual review | Review editable prototype, final branding/navigation choices and accept complete package; theme/density preferences are confirmed |
 | P2-11 | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; current design-tool access and free-first adapter strategy documented |
 
 **Exit:** Main screens and key interactions are approved; responsive and error/empty/loading states are specified; the clickable design prototype and design handoff are ready; owner approves Phase 2.
