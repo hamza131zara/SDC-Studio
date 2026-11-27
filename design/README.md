@@ -3,6 +3,7 @@
 **Phase:** 2 — UI/UX Design  
 **Status:** Design draft for owner review  
 **Branch:** phase-2/ui-ux-design  
+**Review:** [Draft PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3)  
 **Foundation:** Phase 0 and Phase 1 accepted and merged into main  
 **Boundary:** Design artifacts only. No application source code, backend implementation, AI provider integration, GitHub App implementation, runner, preview engine, or deployment code is part of this phase.
 
