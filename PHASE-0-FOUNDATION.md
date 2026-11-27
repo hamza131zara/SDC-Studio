@@ -21,10 +21,28 @@ The primary interaction is a persistent chat/project workspace. An operator crea
 6. Support multiple independent projects and optional deployment through third-party hosting providers.
 7. Keep the initial platform private and single-operator/small-agency oriented; public multi-tenant SaaS and billing are not initial requirements.
 
+### Core product principle: maximum practical user freedom
+
+SDC Studio is intended to score **10/10 for user freedom across legitimate, authorized engineering work**. The product must not add arbitrary or unnecessary content blocks, artificial feature caps, narrow technology allowlists, or needless approval prompts that prevent the owner from completing ordinary professional engineering tasks.
+
+This means:
+- Support broad software categories and languages rather than restricting the product to a small predefined stack.
+- Let the operator choose among available AI providers/models and configure optional local models, including compatible open-weight models.
+- Expose configurable system behavior, operating modes, autonomy levels, and per-tool permissions.
+- Give the agent broad read/write/build/test capabilities inside repositories and workspaces explicitly authorized by the operator.
+- Permit legitimate research, debugging, security analysis, reverse engineering, interoperability work, and development without arbitrary SDC-specific topic bans.
+- Explain capability failures clearly: distinguish an SDC product limitation from a model/provider restriction, quota, unavailable tool, repository permission, hosting constraint, legal requirement, or security boundary.
+- When a selected provider cannot handle a legitimate task, explain the reason and offer an available compliant alternative, such as another configured provider or a local model. Never promise that an alternative will always exist or that it bypasses a provider's terms.
+
+**Meaning of “restriction-free” in this product:** maximum practical freedom and owner control within applicable law, third-party provider terms, repository authorization, and safeguards needed to protect the owner's machine, credentials, data, and projects. Literal zero restrictions across external services cannot be guaranteed, and SDC Studio will not bypass those external controls. Necessary security boundaries must be narrow, transparent, configurable where appropriate, and proportional to the risk.
+
+**Freedom target:** 10/10 for legitimate authorized engineering flexibility. This is a product design target, not a claim that external model providers or hosting platforms have no restrictions. The target is evaluated against the criteria above: breadth of supported work, model/provider choice, owner-configurable autonomy, authorized tool access, minimal unnecessary friction, and transparent handling of external constraints.
+
 ### Non-goals for the initial foundation
 
 - Guaranteeing unlimited or permanently free AI inference, compute, storage, or hosting.
 - Bypassing model-provider quotas, GitHub controls, hosting restrictions, authentication, licensing, or security safeguards.
+- Guaranteeing literal zero restrictions across third-party models, platforms, hosting services, applicable law, or security boundaries; the product target is maximum practical freedom for legitimate authorized work.
 - Direct automatic changes to a repository's default branch.
 - Public SaaS onboarding, subscriptions, billing, or tenant isolation.
 - Building every specialist as a separately hosted model/service. Specialist roles may share a routed model/runtime.
@@ -56,7 +74,7 @@ Initial modes:
 7. **Reverse Engineering** — Analyze software and repositories the operator is authorized to inspect; map structure, dependencies, interfaces, and behavior.
 8. **Deployment & Maintenance** — Prepare and carry out authorized deployment and maintenance operations.
 
-Modes are orchestration policies, not separate products. The selected mode constrains the task plan and tools offered.
+Modes are orchestration policies, not separate products. The selected mode shapes the task plan and default tool selection; the owner can enable additional authorized tools through configuration.
 
 ### 2.3 Execution autonomy
 
@@ -67,6 +85,9 @@ Execution setting is separate from operating mode:
 - **Auto:** Execute permitted actions without per-step approval; preserve mandatory policy gates.
 
 High-impact actions requiring explicit approval include production deployment, deleting or overwriting user data, changing repository administration/security settings, modifying secrets, force-pushing, merging to protected branches, and running commands outside the approved workspace boundary. The platform must not represent third-party policy violations or security bypasses as an autonomy feature.
+
+The owner should be able to configure permissions by tool category and project. Routine, reversible actions inside the approved workspace should not require repetitive confirmations. Approval gates are reserved for clearly defined high-impact actions; they must not be used as arbitrary friction for ordinary development.
+
 
 ### 2.4 SDLC capabilities
 
@@ -97,6 +118,21 @@ The system must report only work actually performed. Test results must be based 
 - Keep the default branch untouched by default.
 - Detect existing uncommitted user work and preserve it.
 - Provide rollback/revert paths based on recorded commits and snapshots.
+
+### 2.6 Restriction-free product experience and user control
+
+- Do not add arbitrary SDC-specific bans on legitimate engineering topics, technologies, project types, or research activities.
+- Make available model/provider choice explicit; allow the owner to configure cloud providers and optional local models.
+- Expose permission settings for repository, filesystem, terminal, browser, research, testing, and deployment tools.
+- Let the owner choose Ask, Guided, or Auto execution separately from the selected engineering mode.
+- Use the least-friction workflow compatible with the configured risk level; routine authorized work should proceed without repeated approval prompts.
+- Explain every blocked or unavailable operation with its actual source: SDC configuration, missing user permission, provider policy, provider quota, platform limitation, legal requirement, or security boundary.
+- Offer a permitted alternative when possible, such as another configured provider or an authorized local model.
+- Do not claim that SDC Studio can remove restrictions imposed by a third-party API, GitHub, hosting vendor, operating system, or applicable law.
+- Never weaken credential protection, execution isolation, or repository recoverability merely to claim a “zero restrictions” rating.
+
+Acceptance target: **10/10 user freedom for legitimate authorized engineering work**, assessed against supported work breadth, user-selected models, configurable autonomy and permissions, broad authorized repository/tool access, low unnecessary friction, and clear external-constraint explanations.
+
 
 ## 3. System architecture
 
@@ -157,7 +193,7 @@ The model gateway must normalize provider differences without hiding them. Each 
 
 The router may select models by task capability, latency, availability, and user preference. It must:
 
-- Respect published provider terms and quotas.
+- Respect published provider terms and quotas; do not impose additional arbitrary SDC-specific restrictions on legitimate requests.
 - Handle 429, 403, timeout, malformed response, and unavailable model states.
 - Use bounded exponential backoff and stop when limits require waiting.
 - Avoid sending secrets or sensitive repository content to a provider unless the operator has explicitly configured and accepted its data terms.
@@ -317,6 +353,7 @@ Phase 0 is complete when all of the following are true:
 - [ ] Product definition and initial scope are explicit.
 - [ ] In-scope capabilities and non-goals are recorded.
 - [ ] Operating modes and execution autonomy are distinguished.
+- [ ] Maximum practical user freedom is a core principle, with a 10/10 target for legitimate authorized engineering work and explicit disclosure of external constraints.
 - [ ] Logical architecture and initial technology baseline are recorded.
 - [ ] Model routing principles and free-tier limitations are recorded.
 - [ ] GitHub access, branch, and write policies are defined.
