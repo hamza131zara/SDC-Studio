@@ -126,9 +126,9 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
 | P2-07 — Settings and integrations | Draft prepared | Integrations and Settings screens specified |
 | P2-08 — Design system | Draft prepared | Both themes; remember last manual selection; Comfortable default, Compact optional; brand accent remains provisional |
-| P2-09 — Interaction prototype | **Pending** | Clickable prototype covering primary user journeys has not yet been created |
+| P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; use connected Product Design app to explore, audit and prototype |
 | P2-10 — Design review and acceptance | **Pending owner review** | Owner reviews design package and approves or requests corrections |
-| P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; architecture review pending |
+| P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; connected Product Design app workflow documented |
 
 ### Current design decisions and assumptions
 
@@ -137,12 +137,12 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 - Comfortable density is the default; Compact is optional.
 - Final SDC logo/accent remains provisional.
 - Figma and Canva connectors are available in ChatGPT; current Figma account access is View/Starter, so canvas writing is not assumed available. Penpot is the free/open-source alternative to evaluate.
-- Product Design and MagicPath are available to connect as external design/prototyping aids; neither is yet a confirmed SDC Studio runtime dependency.
+- Product Design is connected in ChatGPT and can assist with brief refinement, design directions, flow audits and prototyping. It is not an SDC Studio runtime dependency. MagicPath remains an optional alternative, not required for current work.
 - No application code or functional integrations are part of Phase 2.
 
 ## 8. Current next action
 
-**Immediate next action:** Complete the clickable prototype for the primary user journeys, review the new AI design workflow/integration architecture, confirm the remaining brand accent/logo direction, then prepare the Phase 2 design package for owner acceptance. Do not start Phase 3 application implementation until the owner approves the complete design package.
+**Immediate next action:** Use design/08-PROTOTYPE-DESIGN-BRIEF.md with the connected Product Design app to generate/review editable screens and the clickable prototype; run the flow/visual audit against Phase 2 acceptance criteria; then update the design package and request owner approval. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
 Do not:
 - Start Phase 3 application implementation before Phase 2 design approval.
@@ -194,7 +194,8 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Clickable prototype remains pending | P2-09 |
 | 2026-11-27 | Owner selected both themes with last manual choice remembered and Comfortable density by default | design/04-DESIGN-SYSTEM.md |
 | 2026-11-27 | AI design workflow and Figma/Penpot integration architecture drafted | design/07-DESIGN-AGENT-ARCHITECTURE.md |
-| 2026-11-27 | Product Design and MagicPath surfaced for optional ChatGPT connection | External design aids; not connected/confirmed yet |
+| 2026-11-27 | SDC Studio prototype design brief prepared for Product Design app | design/08-PROTOTYPE-DESIGN-BRIEF.md |
+| 2026-11-27 | Product Design app connection confirmed by owner | Use for brief refinement, flow audit and interactive prototype assistance; not an SDC Studio runtime integration |
 
 ## 12. Status maintenance procedure
 
