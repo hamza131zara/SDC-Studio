@@ -199,7 +199,20 @@ All journeys must define:
 
 **Fallback states:** If Figma/Penpot is unavailable, use the native design artifact model and preview. If vision-capable model access is unavailable, disclose that visual critique is limited. If required brand/reference input is missing, record the assumption instead of inventing brand rules.
 
-## 15. Journey M — Add and manage a project tool/API connection
+## 15. Journey L — Revise an existing design
+
+1. Operator selects an existing design version or connects a supported design file.
+2. Agent reads available frames, components, variables and metadata under granted permissions.
+3. Agent summarizes the current design and identifies the requested scope.
+4. Agent proposes a focused change plan.
+5. Agent updates only the affected screens/components/tokens.
+6. Visual and responsive checks rerun for affected surfaces.
+7. A new design version is recorded; the previously accepted version remains available.
+8. Operator reviews and accepts/rejects the revision.
+
+**Success state:** Design revision is traceable, prior accepted version remains recoverable, and the change report identifies exactly what changed.
+
+## 16. Journey M — Add and manage a project tool/API connection
 
 **Goal:** Configure multiple supported external platforms/tools for one project, verify their connection where possible, and make approved operations available to the project's workflows.
 
@@ -226,16 +239,3 @@ All journeys must define:
 - Only adapter-supported operations may be called; do not invent universal API behavior.
 - Do not place keys in prompts, chat messages, repository files, frontend bundles or ordinary logs.
 - Removing a project binding must not revoke a separately shared account credential unless the operator explicitly chooses to revoke that credential too.
-
-## 16. Journey L — Revise an existing design
-
-1. Operator selects an existing design version or connects a supported design file.
-2. Agent reads available frames, components, variables and metadata under granted permissions.
-3. Agent summarizes the current design and identifies the requested scope.
-4. Agent proposes a focused change plan.
-5. Agent updates only the affected screens/components/tokens.
-6. Visual and responsive checks rerun for affected surfaces.
-7. A new design version is recorded; the previously accepted version remains available.
-8. Operator reviews and accepts/rejects the revision.
-
-**Success state:** Design revision is traceable, prior accepted version remains recoverable, and the change report identifies exactly what changed.
