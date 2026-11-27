@@ -311,24 +311,53 @@ Activity event fields:
 
 Do not display chain-of-thought or private model reasoning. Show concise action explanations, plans, tool events, and outcomes.
 
-## 12. Screen K — Integrations
+## 12. Screen K — Project Settings: Integrations & APIs
 
-Separate connection cards/sections:
-- GitHub App: connected/disconnected, installation owner, selected repository scope, granted permissions summary.
-- AI Providers: provider name, configured state, enabled models, test status, data-term status and quota state where available.
-- Local Model Runtime: configured/unavailable, runtime endpoint label, model list and health status.
+**Entry point:** Active project header/menu → Project Settings → Integrations & APIs. The page header always identifies the project whose connections are being managed.
 
-Never display full credentials. Use masked credential status and replace/revoke controls.
+**Integration catalog**
+- Searchable, categorized catalog: AI/Model Providers; Development and Design Tools; Source Control; Testing and Browser; Hosting and Deployment; Research/Search; Other supported tools.
+- Each platform card describes purpose, supported adapter operations, authentication methods, required scopes, data sent, status-check/test support and known usage/cost implications where documented.
+- Only providers/tools with a supported adapter appear as ready-to-configure integrations. A generic/custom connector, when supported in a later design, must be clearly labelled separately from verified built-in adapters.
 
-## 13. Screen L — Settings
+**Configured project connections**
+- One card per project-bound integration: platform/tool name, category, configured/verified state, account or endpoint label, granted scopes/capabilities, last checked timestamp, and provider-reported usage/quota when available.
+- Actions: Configure, Test Connection, Check Status, Enable/Disable for this project, Replace Credential, Reauthorize, Disconnect/Remove.
+- Test Connection uses a safe, non-mutating provider check where available.
+- A model/sample API request that could incur usage is a separate explicit action with a warning/confirmation.
+- If status/test is unsupported, show “Status check not supported” or “Test not supported”; never invent a green Connected state.
+- A saved credential with no successful check displays “Configured — not verified”, not “Connected”.
 
-Settings sections:
-- General: product preferences and default project behavior.
-- Appearance: theme and density preferences.
-- Models and Providers: configured provider/model defaults.
-- Execution: Ask/Guided/Auto defaults, tool categories and resource profile.
-- Permissions: project-scoped read/write/terminal/browser/deployment access.
-- GitHub: installation/repository scope and access state.
+**Add / configure integration flow**
+1. Select platform/tool from catalog.
+2. Review adapter details, supported operations, authentication method(s), requested permissions and data-handling notice.
+3. Enter the API key/token into a masked field when that method is supported, or complete OAuth/local endpoint setup when required.
+4. Save to protected credential storage; bind a secret reference to the active project.
+5. Run safe connection test/status check when supported.
+6. Review result and enable approved capabilities for this project.
+
+**Status and evidence**
+- Distinguish Not configured, Configured — not verified, Connected/Verified, Authentication failed, Authorization expired, Permission limited, Rate limited, Quota exhausted, Provider unavailable, Disabled, and Test unsupported.
+- Show last checked time and latency where available.
+- Show remaining quota/usage only when the provider API exposes it; otherwise say “Not reported by provider”.
+- Show an actionable recovery hint for failed states.
+- When an agent calls a tool, the Activity surface records provider, operation, scope, status and duration, with secrets and sensitive payloads redacted.
+
+**Security and scope**
+- Never display a full saved credential. Show only configured/masked status, plus Replace/Remove controls.
+- Do not put secrets in chat, model context, frontend bundles, repository files or ordinary logs.
+- New credentials are project-scoped by default. Attaching an existing account-level credential requires explicit confirmation and a visible project-scope summary.
+- Removing a project binding does not silently revoke a credential used by other projects.
+
+## 13. Screen L — Global Settings
+
+Global Settings covers application-wide preferences rather than project tool connections:
+- General: account/session and application defaults.
+- Appearance: Light/Dark theme and Comfortable/Compact density.
+- Application behavior: default mode/model-routing preference where the project has no override.
+- Security overview: summary of credential storage and active sessions, without exposing secret values.
+
+**Project-specific settings are not configured here.** The operator manages project tools, API keys, model providers and project repository connections from Project Settings → Integrations & APIs (with repository/access detail available in its own project settings subsection).
 
 Settings must clearly distinguish a default preference from a hard security policy or current external provider limitation.
 
