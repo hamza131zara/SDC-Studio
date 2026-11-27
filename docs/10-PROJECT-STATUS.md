@@ -114,7 +114,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 ## 7. Phase 2 — UI/UX Design progress
 
 **Current branch:** phase-2/ui-ux-design  
-**Status:** Design draft prepared; interaction prototype and owner acceptance remain pending.
+**Status:** Design specifications and design-agent architecture drafted; interaction prototype and owner acceptance remain pending.
 
 | Work item | Status | Evidence / pending action |
 |---|---|---|
