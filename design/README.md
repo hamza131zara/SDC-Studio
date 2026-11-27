@@ -16,6 +16,7 @@
 5. [Interaction and Responsive Specification](./05-INTERACTION-RESPONSIVE-SPEC.md)
 6. [Design Acceptance Criteria](./06-DESIGN-ACCEPTANCE.md)
 7. [AI Design Workflow and Integration Architecture](./07-DESIGN-AGENT-ARCHITECTURE.md)
+8. [Prototype Design Brief](./08-PROTOTYPE-DESIGN-BRIEF.md)
 
 ## Core experience
 
@@ -26,6 +27,10 @@ SDC Studio combines:
 - A visible agent activity timeline and owner-controlled approval flow.
 
 The interface must keep the conversation as the primary way to express intent while giving the operator clear visibility into project state and agent operations.
+
+## Prototype brief
+
+Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canonical prompt/brief when working with the connected Product Design app or another approved design tool.
 
 ## Owner-selected design preferences
 
@@ -44,9 +49,9 @@ The interface must keep the conversation as the primary way to express intent wh
 | P2-06 Execution transparency | Draft prepared |
 | P2-07 Settings and integrations | Draft prepared |
 | P2-08 Design system | Draft prepared; theme and density preference recorded |
-| P2-09 Interaction prototype | Specification drafted; clickable prototype pending |
+| P2-09 Interaction prototype | Canonical prototype brief prepared; interactive prototype pending |
 | P2-10 Design review and acceptance | Pending owner review |
-| P2-11 AI design workflow and integration architecture | Draft prepared |
+| P2-11 AI design workflow and integration architecture | Draft prepared; Product Design app workflow recorded |
 
 ## Design assumptions requiring owner review
 
