@@ -4,18 +4,35 @@ Private AI-powered software engineering platform for agency workflows. Multi-age
 
 ## Project status
 
-- Current phase: **Phase 0 — Foundation**
-- Working branch: `phase-0/foundation`
-- Default branch: `main`
-- Product scope, requirements, architecture, security model and roadmap: [Phase 0 Foundation](./PHASE-0-FOUNDATION.md)
+- Phase 0 — Foundation: **accepted and merged**
+- Current phase: **Phase 1 — Documentation**
+- Phase 1: **expanded documentation draft under owner review**
+- Working branch: phase-1/documentation
+- Default branch: main
+- Application implementation: not started
+- UI/UX design: not started
+
+## Approved foundation
+
+See [Phase 0 Foundation](./PHASE-0-FOUNDATION.md) for product scope, the 10/10 legitimate engineering user-freedom target, architecture baseline, security model, repository policy, and phase sequence.
+
+## Project documentation
+
+Start at the [Documentation Index](./docs/README.md). It links the complete product specification, user workflows, system architecture, module contracts, data model, security requirements, engineering standards, acceptance criteria, detailed roadmap, status register, traceability matrix, decision log, agent/tool catalog, QA strategy, integration strategy, and project continuity guide.
+
+## Where to resume
+
+1. Read [Project Status](./docs/10-PROJECT-STATUS.md) to see what is complete, pending, blocked, and next.
+2. Read [Implementation Roadmap](./docs/09-IMPLEMENTATION-ROADMAP.md) for phase order, tasks, dependencies, and exit criteria.
+3. Read [Project Memory Guide](./docs/16-PROJECT-MEMORY-AND-CHANGE-CONTROL.md) before resuming after a break or assistant/session change.
 
 ## Phase policy
 
-Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Keep changes within the approved scope; propose a foundation change only when a material requirement or technical constraint warrants it.
+Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Phase 1 is documentation only: no UI/UX design or application implementation begins until this documentation set is approved and merged.
 
 ## Repository safety
 
-- Keep `main` stable.
+- Keep main stable.
 - Work on task-specific branches and review diffs.
 - Do not force-push or rewrite shared history.
 - Do not commit credentials, API keys, tokens, or secret-bearing environment files.
