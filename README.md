@@ -4,23 +4,31 @@ Private AI-powered software engineering platform for agency workflows. Multi-age
 
 ## Project status
 
-- Phase 0 — Foundation: **approved and merged**
+- Phase 0 — Foundation: **accepted and merged**
 - Current phase: **Phase 1 — Documentation**
-- Phase 1 status: **draft for owner review**
+- Phase 1: **expanded documentation draft under owner review**
 - Working branch: phase-1/documentation
 - Default branch: main
+- Application implementation: not started
+- UI/UX design: not started
 
 ## Approved foundation
 
-See [Phase 0 Foundation](./PHASE-0-FOUNDATION.md) for product scope, user-freedom principle, architecture baseline, security model, repository policy, and phase roadmap.
+See [Phase 0 Foundation](./PHASE-0-FOUNDATION.md) for product scope, the 10/10 legitimate engineering user-freedom target, architecture baseline, security model, repository policy, and phase sequence.
 
-## Phase 1 documentation
+## Project documentation
 
-See the [Phase 1 Documentation Index](./docs/README.md) for the product specification, workflows, system architecture, module contracts, data model, security specification, engineering standards, and acceptance criteria.
+Start at the [Documentation Index](./docs/README.md). It links the complete product specification, user workflows, system architecture, module contracts, data model, security requirements, engineering standards, acceptance criteria, detailed roadmap, status register, traceability matrix, decision log, agent/tool catalog, QA strategy, integration strategy, and project continuity guide.
+
+## Where to resume
+
+1. Read [Project Status](./docs/10-PROJECT-STATUS.md) to see what is complete, pending, blocked, and next.
+2. Read [Implementation Roadmap](./docs/09-IMPLEMENTATION-ROADMAP.md) for phase order, tasks, dependencies, and exit criteria.
+3. Read [Project Memory Guide](./docs/16-PROJECT-MEMORY-AND-CHANGE-CONTROL.md) before resuming after a break or assistant/session change.
 
 ## Phase policy
 
-Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Phase 1 is documentation only: no UI/UX design or application implementation begins until this documentation set is approved.
+Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Phase 1 is documentation only: no UI/UX design or application implementation begins until this documentation set is approved and merged.
 
 ## Repository safety
 
