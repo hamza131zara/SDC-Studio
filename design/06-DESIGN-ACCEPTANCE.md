@@ -13,7 +13,7 @@ Phase 2 is accepted when:
 - [ ] Existing GitHub repository connection flow is specified, including selected repository scope and read-only discovery state.
 - [ ] Project Settings contains a dedicated Integrations & APIs management area for multiple supported platforms/tools.
 - [ ] Integration catalog is searchable/category-based and exposes adapter-supported authentication methods, operations, required scopes and data handling.
-- [ ] Project integrations support protected credential setup, project binding, safe Test Connection/Check Status where supported, and truthful unsupported/untested states.
+- [ ] Project integrations support protected credential setup, encrypted-at-rest server-side storage, project binding, safe Test Connection/Check Status where supported, and truthful unsupported/untested states.
 - [ ] Potentially billable sample API/model requests are separate from safe connection checks and require explicit operator initiation.
 - [ ] Project integration cards expose actual status, last-check evidence, available usage/quota information where reported, and recovery actions.
 - [ ] Agent tool calls are limited to configured/enabled project integrations and their permitted adapter operations; activity is auditable with secrets redacted.
