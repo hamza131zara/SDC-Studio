@@ -128,7 +128,7 @@ The statuses above are a record of the repository state at the date shown in PRO
 | P2-06 | Execution transparency design | Activity log, tool events, approvals, status indicators and evidence |
 | P2-07 | Settings and integrations design | Provider settings, GitHub connection, permissions and project configuration |
 | P2-08 | Design system | Typography, colors, spacing, components, states and responsive rules |
-| P2-09 | Interaction prototype | Clickable design covering primary workflows |
+| P2-09 | Interaction prototype | Clickable design covering primary workflows, authored in an editable design canvas |
 | P2-10 | Design review and acceptance | Owner-approved designs and recorded exceptions |
 | P2-11 | AI design workflow and integration architecture | Design-agent pipeline, native artifact model, Figma/Penpot adapter strategy, visual review and design-to-development handoff |
 
@@ -148,7 +148,7 @@ The statuses above are a record of the repository state at the date shown in PRO
 | P2-08 | Draft prepared | design/04-DESIGN-SYSTEM.md |
 | P2-09 | Brief ready; prototype pending | Use design/08-PROTOTYPE-DESIGN-BRIEF.md with the connected Product Design app; obtain editable screens and clickable user flows |
 | P2-10 | Pending owner review | Review theme/branding and accept complete package |
-| P2-11 | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; owner review pending |
+| P2-11 | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; current design-tool access and free-first adapter strategy documented |
 
 **Exit:** Main screens and key interactions are approved; responsive and error/empty/loading states are specified; the clickable design prototype and design handoff are ready; owner approves Phase 2.
 
