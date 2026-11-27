@@ -269,3 +269,29 @@ The actual CSS variables/tailwind configuration are implementation work and must
 - Confirm whether the project workspace tabs should be horizontal tabs or a secondary navigation rail.
 
 Until reviewed, these are design proposals and do not change the Phase 0 product foundation.
+
+
+## 17. Owner-selected defaults
+
+The operator selected the following preferences for SDC Studio:
+
+- **Theme strategy:** Both Light and Dark themes are available.
+- **Theme persistence:** On first visit, use the operating-system theme preference until the operator manually selects Light or Dark. Remember the last manual selection and restore it on the next visit.
+- **Workspace density:** Comfortable is the default. Compact is an optional density setting for operators who want more rows, messages, files or activity entries visible.
+
+### Density behavior
+
+Comfortable:
+- More vertical spacing in chat and reports.
+- Easier separation of task/activity events.
+- Larger row padding in file lists and settings.
+- Best default for everyday use and long sessions.
+
+Compact:
+- Reduced spacing and row height.
+- More files, tool events, test rows and terminal output visible.
+- Best for intensive development and evidence review.
+
+Compact must not shrink text below accessible sizes or remove labels/status information. Density changes layout spacing, not semantic hierarchy, color meaning or component behavior.
+
+These are owner-selected preferences for the product design. They are not a choice of brand accent or final logo.
