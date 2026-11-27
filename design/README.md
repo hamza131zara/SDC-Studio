@@ -52,7 +52,7 @@ The interface must keep the conversation as the primary way to express intent wh
 
 - Desktop-first composition because the primary workflow involves code, diffs, terminal, and preview side-by-side.
 - Responsive tablet/mobile support for conversation, task status, reports, and approvals; full multi-pane development is optimized for desktop.
-- Dark developer-focused default theme with a light theme as a design-system variant.
+- Both themes are available; the first visit follows the OS preference and subsequent visits remember the last manual theme selection.
 - Neutral visual foundation; final brand accent and logo can be aligned with SDC branding during owner review.
 - One operator-focused private product; no public signup, billing, team administration, or customer tenancy screens.
 
