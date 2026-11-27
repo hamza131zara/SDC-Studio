@@ -59,14 +59,14 @@ Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canoni
 - Comfortable workspace density by default; Compact is optional and uses one global setting.
 - Theme and density are independent preferences.
 
-## Remaining design assumptions for review
+## Deferred visual refinements
 
 - Desktop-first composition because the primary workflow involves code, diffs, terminal, and preview side-by-side.
 - Responsive tablet/mobile support for conversation, task status, reports, and approvals; full multi-pane development is optimized for desktop.
 - Neutral visual foundation; final brand accent and logo can be aligned with SDC branding during owner review.
 - One operator-focused private product; no public signup, billing, team administration, or customer tenancy screens.
 
-These assumptions do not change the approved product scope. Owner feedback may adjust visual styling and layout within the existing product requirements.
+These refinements were not blockers for Phase 2 acceptance. They may be resolved during Phase 3 implementation without changing the approved product scope.
 
 ## Design-tool access and recommendation
 
