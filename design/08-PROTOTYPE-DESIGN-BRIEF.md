@@ -112,6 +112,7 @@ Show a clearly project-scoped settings page, opened from the active project's he
 - Show “Test/status check unsupported” where the adapter cannot safely verify.
 - A potentially billable sample API/model request must be a separate explicit action with a cost/usage warning.
 - Never display a real API key or invite the operator to paste a real secret into the prototype. Use clearly fictional masked sample values and simulated statuses only.
+- Production design must assume encrypted-at-rest server-side credential storage and an opaque project-bound secret reference; the frontend must never keep or retrieve the saved raw secret.
 
 ### Screen 9 — Global Settings & Appearance
 - Account/session and application-wide defaults.
