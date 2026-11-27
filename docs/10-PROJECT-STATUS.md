@@ -146,7 +146,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 
 ## 8. Current next action
 
-**Immediate next action:** Use design/08-PROTOTYPE-DESIGN-BRIEF.md with the connected Product Design app to generate/review editable screens and the clickable prototype; run the flow/visual audit against Phase 2 acceptance criteria; then update the design package and request owner approval. Do not start Phase 3 application implementation until the owner approves the complete design package.
+**Immediate next action:** Choose the design-work path: (A) connect Penpot's official MCP in a supported MCP client and use design/08-PROTOTYPE-DESIGN-BRIEF.md as the canonical brief, or (B) switch to ChatGPT Work mode and run Product Design's ideation/prototyping workflow using that brief. The current standard Chat and Figma View seat cannot author the required editable Figma Design canvas. After producing the prototype, run the flow/visual audit, update the design package and request owner approval. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
 Do not:
 - Start Phase 3 application implementation before Phase 2 design approval.
