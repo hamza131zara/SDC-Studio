@@ -107,7 +107,7 @@ Show a clearly project-scoped settings page, opened from the active project's he
 - Platform detail panel explaining purpose, supported operations, accepted authentication methods, required scopes, data sent, status-test availability and usage/cost notes.
 - Add/configure flow with masked API-key field where supported; show OAuth/token/local endpoint alternatives only where appropriate for the selected adapter.
 - Configured project integration cards with platform, configured/verified/disabled status, capabilities/scopes, last checked time, and provider-reported quota/usage where available.
-- Actions for Configure, Test Connection, Check Status, Enable/Disable for this project, Replace Credential, Reauthorize and Remove Project Binding.
+- Actions for Configure, Test Connection, Check Status, Run Sample Request (clearly marked as potentially billable), Enable/Disable for this project, Replace Credential, Reauthorize and Remove Project Binding.
 - Clear “Configured — not verified” state after a key is saved but no successful test has occurred.
 - Show “Test/status check unsupported” where the adapter cannot safely verify.
 - A potentially billable sample API/model request must be a separate explicit action with a cost/usage warning.
@@ -185,6 +185,7 @@ Create prototype links for these journeys:
 9. Open final task report.
 10. Open Global Settings and switch Dark/Light and Comfortable/Compact.
 11. Open a project's Settings → Integrations & APIs, select a platform, inspect its auth options, configure a fictional masked credential, run a simulated safe connection check, and inspect Connected / Failed / Not supported status variants.
+12. Demonstrate a separate Run Sample Request action with a visible simulated usage/cost warning. Do not execute a real provider call.
 12. Show that the same platform can be configured independently for a second project, without leaking or cross-attaching credentials.
 
 Use believable sample content such as a fictional "Agency Website Refresh" project. Clearly distinguish sample prototype data from actual repository/tool data.
