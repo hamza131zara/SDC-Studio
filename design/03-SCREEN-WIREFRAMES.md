@@ -22,7 +22,6 @@ The wireframes below are structural descriptions. They intentionally avoid commi
     │  - Project A   │                                           │ Artifacts      │
     │  - Project B   │                                           │                │
     │                │                                           │                │
-    │ Integrations   │                                           │                │
     │ Settings       │                                           │                │
     │ Account        │                                           │                │
     └────────────────┴──────────────────────────────────────────┴────────────────┘
@@ -31,6 +30,8 @@ Shared behavior:
 - Sidebar can collapse without losing the active route.
 - Context panel opens/closes independently.
 - Header shows current page/project and active connection status.
+- When a project is active, the project header exposes a Settings action; its Integrations & APIs subsection is project-scoped.
+- The global sidebar Settings entry opens application-wide preferences only; it does not configure project credentials.
 - Main content owns vertical scrolling; panes should not cause accidental whole-page scroll where independent scrolling is needed.
 - At mobile widths, sidebar and context panel become drawers.
 
@@ -44,8 +45,7 @@ Shared behavior:
     │ Recent         │       [Describe a task or ask a question...]   │
     │ Projects       │                                               │
     │                │       [Attach] [Image] [Project/Repo]          │
-    │ Integrations   │       [Mode: Auto] [Model: Auto] [Auto] [Send] │
-    │ Settings       │                                               │
+    │ Settings       │       [Mode: Auto] [Model: Auto] [Auto] [Send] │
     │                │ Recent projects / suggested recent chats      │
     └────────────────┴───────────────────────────────────────────────┘
 
