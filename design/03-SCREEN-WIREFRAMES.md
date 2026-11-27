@@ -345,6 +345,8 @@ Do not display chain-of-thought or private model reasoning. Show concise action 
 
 **Security and scope**
 - Never display a full saved credential. Show only configured/masked status, plus Replace/Remove controls.
+- Store credentials encrypted at rest in protected server-side secret storage. Project configuration stores an opaque secret reference and connector metadata, not the raw key.
+- The UI may submit a new credential only through the protected credential-save flow; do not persist it in browser storage, client telemetry or ordinary application state after save.
 - Do not put secrets in chat, model context, frontend bundles, repository files or ordinary logs.
 - New credentials are project-scoped by default. Attaching an existing account-level credential requires explicit confirmation and a visible project-scope summary.
 - Removing a project binding does not silently revoke a credential used by other projects.
