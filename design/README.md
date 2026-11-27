@@ -81,7 +81,7 @@ Full tool-access notes and references are in [07-DESIGN-AGENT-ARCHITECTURE.md](.
 
 ## Remaining Phase 2 work
 
-- Connect Penpot MCP in a supported MCP client (or use Product Design in ChatGPT Work mode) and create the clickable prototype covering the primary journeys listed in the interaction specification.
+- Connect Penpot MCP in a supported MCP client (or use Product Design in ChatGPT Work mode) and create the clickable prototype covering the primary journeys listed in the interaction specification, including Project Settings → Integrations & APIs for multi-platform connection setup, safe test/status checks and explicit sample API requests.
 - Review the provisional visual direction, final SDC brand accent/logo and workspace navigation choice with the owner.
 - Validate the complete design package against the acceptance checklist.
 - Record approved/deferred decisions and obtain owner acceptance.
