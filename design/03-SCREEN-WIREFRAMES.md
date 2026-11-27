@@ -1,0 +1,467 @@
+# SDC Studio — Screen Wireframe Specification
+
+**Status:** Design draft  
+**Work items:** P2-03, P2-04, P2-05, P2-06, P2-07, P2-09  
+**Purpose:** Define low-fidelity page composition and component placement before high-fidelity visual design or implementation.
+
+The wireframes below are structural descriptions. They intentionally avoid committing to final brand colors, logo artwork, or pixel dimensions until the design system and owner review are accepted.
+
+## 1. Shared desktop application shell
+
+    ┌────────────────────────────────────────────────────────────────────────────┐
+    │ SDC Studio                                    Project / Model / Profile     │
+    ├────────────────┬──────────────────────────────────────────┬────────────────┤
+    │ LEFT SIDEBAR   │ MAIN WORK AREA                            │ CONTEXT PANEL  │
+    │                │                                           │ (collapsible)  │
+    │ + New Chat     │ Current page / conversation               │ Project        │
+    │ + New Project  │                                           │ Repository     │
+    │                │                                           │ Branch         │
+    │ Recent chats   │ Main content                              │ Active task    │
+    │                │                                           │ Files changed  │
+    │ Projects       │                                           │ Recent actions │
+    │  - Project A   │                                           │ Artifacts      │
+    │  - Project B   │                                           │                │
+    │                │                                           │                │
+    │ Settings       │                                           │                │
+    │ Account        │                                           │                │
+    └────────────────┴──────────────────────────────────────────┴────────────────┘
+
+Shared behavior:
+- Sidebar can collapse without losing the active route.
+- Context panel opens/closes independently.
+- Header shows current page/project and active connection status.
+- When a project is active, the project header exposes a Settings action; its Integrations & APIs subsection is project-scoped.
+- The global sidebar Settings entry opens application-wide preferences only; it does not configure project credentials.
+- Main content owns vertical scrolling; panes should not cause accidental whole-page scroll where independent scrolling is needed.
+- At mobile widths, sidebar and context panel become drawers.
+
+## 2. Screen A — Home / New Chat
+
+    ┌────────────────┬───────────────────────────────────────────────┐
+    │ SDC Studio     │ New conversation                              │
+    │ + New Chat     │                                               │
+    │ + New Project  │       How can SDC Studio help today?           │
+    │                │                                               │
+    │ Recent         │       [Describe a task or ask a question...]   │
+    │ Projects       │                                               │
+    │                │       [Attach] [Image] [Project/Repo]          │
+    │ Settings       │       [Mode: Auto] [Model: Auto] [Auto] [Send] │
+    │                │ Recent projects / suggested recent chats      │
+    └────────────────┴───────────────────────────────────────────────┘
+
+Required elements:
+- Prominent multi-line composer.
+- Submit action enabled only when the request is valid.
+- Attachment control with accepted-file and size guidance.
+- Optional project/repository context.
+- Separate selectors for mode, model, and autonomy.
+- Recent project/conversation entry points.
+
+Composer states:
+- Empty.
+- Typing.
+- Attachment added.
+- Uploading.
+- Unsupported file.
+- Oversized file.
+- Submitting.
+- Streaming response.
+- Provider unavailable/quota exceeded.
+- Retryable connection interruption.
+
+Do not overload the home screen with analytics cards or marketing content.
+
+## 3. Screen B — New Project dialog
+
+    ┌──────────────────────────────────────────────┐
+    │ Create a project                         [X] │
+    │                                              │
+    │ Project name                                 │
+    │ [________________________________________]   │
+    │ Description (optional)                       │
+    │ [________________________________________]   │
+    │                                              │
+    │ Start with                                   │
+    │ (•) Blank workspace                          │
+    │ ( ) Connect a GitHub repository              │
+    │                                              │
+    │                [Cancel] [Create project]     │
+    └──────────────────────────────────────────────┘
+
+Rules:
+- Project name is required.
+- Description is optional.
+- Blank workspace must be available without GitHub.
+- If GitHub option is selected, continue to the dedicated repository connection flow.
+- Do not imply that a repository is created on GitHub unless that action is separately implemented and authorized.
+
+## 4. Screen C — Conversation
+
+    ┌────────────────┬──────────────────────────────────┬───────────────┐
+    │ Sidebar        │ Conversation title                │ Context       │
+    │                │ Project: Project A  Branch: task-x │ Panel         │
+    │ Recent chats   │                                  │               │
+    │                │ User message                      │ Project       │
+    │ Projects       │                                  │ Repo          │
+    │                │ Assistant response                │ Branch        │
+    │                │                                  │               │
+    │                │ ┌──────────────────────────────┐ │ Active task   │
+    │                │ │ Task plan / activity         │ │ Files changed │
+    │                │ │ 1. Inspect project           │ │ Artifacts     │
+    │                │ │ 2. Plan changes              │ │               │
+    │                │ │ 3. Implement                 │ │               │
+    │                │ │ 4. Verify                    │ │               │
+    │                │ └──────────────────────────────┘ │               │
+    │                │                                  │               │
+    │                │ [Attach] [Prompt composer...]    │               │
+    │                │ [Mode] [Model] [Autonomy] [Send] │               │
+    └────────────────┴──────────────────────────────────┴───────────────┘
+
+Required behavior:
+- Messages are visually distinct from tool/activity events.
+- Assistant messages can contain plan summaries, citations, code, and report sections.
+- Activity cards can expand to show operation details and output.
+- Long-running task status remains visible while scrolling.
+- The composer remains available when the task permits another message.
+- User can stop/cancel a running task where the runtime supports safe cancellation.
+- A context panel may show project/repository state without duplicating the main conversation.
+
+## 5. Screen D — Project Overview
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Project A                          [Connect repo] [New task]  │
+    │ Description / project summary                                │
+    ├───────────────────────────────────────────────────────────────┤
+    │ Repository: owner/repo   Branch: main   Status: Connected    │
+    ├───────────────────────────────────────────────────────────────┤
+    │ [Chat] [Files] [Changes] [Preview] [Terminal] [QA] [Activity] │
+    │ [Reports]                                                     │
+    ├───────────────────────────────────────────────────────────────┤
+    │                                                               │
+    │ Project summary                                               │
+    │ Recent conversations and tasks                                │
+    │ Latest task status                                            │
+    │ Repository health / last verified baseline                    │
+    │ Recent reports and screenshots                                │
+    │                                                               │
+    └───────────────────────────────────────────────────────────────┘
+
+Required content:
+- Project identity and description.
+- Repository connection state.
+- Current/default branch and baseline where known.
+- Recent tasks and status.
+- Quick access to primary project surfaces.
+- Clear indication if no repository is connected.
+
+## 6. Screen E — Project Files
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Project A  / Files                                             │
+    ├───────────────────┬───────────────────────────────────────────┤
+    │ File tree         │ File viewer                                │
+    │                   │ path/to/file.ts                            │
+    │ src/              │ ─────────────────────────────────────────  │
+    │  app/             │                                           │
+    │  components/      │ Code with line numbers                     │
+    │ package.json      │                                           │
+    │ README.md         │                                           │
+    │                   │                                           │
+    └───────────────────┴───────────────────────────────────────────┘
+
+Rules:
+- Show relative project paths.
+- Do not expose host absolute paths or secret values.
+- Mark files modified by the active task.
+- Distinguish tracked, untracked, ignored, and unavailable files where known.
+- Editing behavior is available only through authorized workspace tools and must create an auditable diff.
+- Sensitive files can be masked or excluded according to project settings.
+
+## 7. Screen F — Changes / Diff Review
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Project A / Changes          Branch: task/feature-x            │
+    ├──────────────────────┬────────────────────────────────────────┤
+    │ Changed files        │ Selected file diff                     │
+    │                      │                                        │
+    │ + NewComponent.tsx   │ - old code                              │
+    │ M page.tsx           │ + new code                              │
+    │ M package.json       │                                        │
+    │                      │                                        │
+    │ Summary:             │ [Unified] [Split]                       │
+    │ 2 modified           │                                        │
+    │ 1 added              │                                        │
+    │ 0 deleted            │                                        │
+    ├──────────────────────┴────────────────────────────────────────┤
+    │ [Open task activity] [Commit/PR status] [Request revision]    │
+    └───────────────────────────────────────────────────────────────┘
+
+Required elements:
+- Added/modified/deleted/renamed counts.
+- File list and per-file diff.
+- Unified and split diff modes if supported by chosen editor component.
+- Task/branch/baseline references.
+- Related test/evidence links.
+- Clear state if no changes exist.
+- No automatic merge button in the ordinary task diff surface.
+
+## 8. Screen G — Preview
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Project A / Preview          [Desktop] [Tablet] [Mobile]      │
+    │ Preview: Running  http://preview-session/... [Open separately]│
+    ├───────────────────────────────────────────────────────────────┤
+    │                                                               │
+    │                 EMBEDDED APPLICATION PREVIEW                  │
+    │                                                               │
+    │                                                               │
+    └───────────────────────────────────────────────────────────────┘
+    │ [Reload] [Capture screenshot] [Run browser checks] [Stop]     │
+
+States:
+- Not started.
+- Starting/readiness check.
+- Running.
+- Build failed.
+- Server stopped.
+- Preview expired.
+- Access denied.
+- Runner unavailable.
+
+The UI must never display a fake/placeholder URL as a working preview. Preview origin and revision should be visible.
+
+## 9. Screen H — Terminal
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Project A / Terminal      Workspace: task-123   [Clear view]  │
+    ├───────────────────────────────────────────────────────────────┤
+    │ $ npm run build                                               │
+    │ > build                                                       │
+    │ ...                                                           │
+    │ ✓ Build completed                                             │
+    │                                                               │
+    │ Command: npm run build   Exit code: 0   Duration: 24s         │
+    └───────────────────────────────────────────────────────────────┘
+
+Terminal presentation:
+- Readable command and output blocks.
+- Working directory relative to workspace.
+- Running/exit status and duration.
+- Expandable stdout/stderr.
+- Redacted secrets.
+- Clear indicator that commands run in an isolated project workspace.
+- Command execution input is enabled only according to configured permissions/autonomy.
+- Destructive/high-impact commands require an approval explanation.
+
+## 10. Screen I — QA and Test Evidence
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Project A / QA                         [Run test profile]     │
+    ├───────────────────────────────────────────────────────────────┤
+    │ Latest run: Completed with issues   Revision: abc1234         │
+    │                                                               │
+    │ Unit tests       Passed / Failed / Skipped                    │
+    │ Integration      Passed / Failed / Not run                    │
+    │ E2E              Passed / Failed / Not configured             │
+    │ Browser          Completed / Failed                            │
+    │ Accessibility    Completed / Not run                           │
+    │ Security         Completed / Not configured                    │
+    ├───────────────────────────────────────────────────────────────┤
+    │ Screenshots | Console | Network | Traces | Test output        │
+    │ [thumbnail] [thumbnail]                                       │
+    │                                                               │
+    │ Defects and repair history                                    │
+    └───────────────────────────────────────────────────────────────┘
+
+Required distinctions:
+- Passed, failed, skipped, blocked, not run, and not configured.
+- Tested revision and browser/viewport.
+- Screenshots linked to a test run.
+- Console/page errors separate from warnings.
+- Failed network requests separate from non-2xx responses.
+- Repairs and retests retain their history.
+
+## 11. Screen J — Agent Activity
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Task Activity                         Status: Running         │
+    ├───────────────────────────────────────────────────────────────┤
+    │ 09:41  Repository scan                  Completed             │
+    │ 09:42  Read package.json                Completed             │
+    │ 09:43  Plan implementation              Completed             │
+    │ 09:44  Create task branch               Completed             │
+    │ 09:45  Update component                  Running               │
+    │                                                               │
+    │ [Expand operation]                                            │
+    │ Tool: filesystem.write                                        │
+    │ Target: src/components/...                                    │
+    │ Reason: implement acceptance criterion FR-...                │
+    │ Result: pending                                               │
+    └───────────────────────────────────────────────────────────────┘
+
+Activity event fields:
+- Timestamp.
+- Agent role.
+- Action/tool name.
+- Reason/related task step.
+- Target resource (redacted/scoped).
+- Status.
+- Result summary.
+- Evidence/diff link where applicable.
+
+Do not display chain-of-thought or private model reasoning. Show concise action explanations, plans, tool events, and outcomes.
+
+## 12. Screen K — Project Settings: Integrations & APIs
+
+**Entry point:** Active project header/menu → Project Settings → Integrations & APIs. The page header always identifies the project whose connections are being managed.
+
+**Integration catalog**
+- Searchable, categorized catalog: AI/Model Providers; Development and Design Tools; Source Control; Testing and Browser; Hosting and Deployment; Research/Search; Other supported tools.
+- Each platform card describes purpose, supported adapter operations, authentication methods, required scopes, data sent, status-check/test support and known usage/cost implications where documented.
+- Only providers/tools with a supported adapter appear as ready-to-configure integrations. A generic/custom connector, when supported in a later design, must be clearly labelled separately from verified built-in adapters.
+
+**Configured project connections**
+- One card per project-bound integration: platform/tool name, category, configured/verified state, account or endpoint label, granted scopes/capabilities, last checked timestamp, and provider-reported usage/quota when available.
+- Actions: Configure, Test Connection, Check Status, Run Sample Request (explicit and potentially billable), Enable/Disable for this project, Replace Credential, Reauthorize, Disconnect/Remove.
+- Test Connection uses a safe, non-mutating provider check where available.
+- A model/sample API request that could incur usage is a separate explicit action with a warning/confirmation.
+- If status/test is unsupported, show “Status check not supported” or “Test not supported”; never invent a green Connected state.
+- A saved credential with no successful check displays “Configured — not verified”, not “Connected”.
+
+**Add / configure integration flow**
+1. Select platform/tool from catalog.
+2. Review adapter details, supported operations, authentication method(s), requested permissions and data-handling notice.
+3. Enter the API key/token into a masked field when that method is supported, or complete OAuth/local endpoint setup when required.
+4. Save to protected credential storage; bind a secret reference to the active project.
+5. Run safe connection test/status check when supported.
+6. Review result and enable approved capabilities for this project.
+
+**Status and evidence**
+- Distinguish Not configured, Configured — not verified, Connected/Verified, Authentication failed, Authorization expired, Permission limited, Rate limited, Quota exhausted, Provider unavailable, Disabled, and Test unsupported.
+- Show last checked time and latency where available.
+- Show remaining quota/usage only when the provider API exposes it; otherwise say “Not reported by provider”.
+- Show an actionable recovery hint for failed states.
+- When an agent calls a tool, the Activity surface records provider, operation, scope, status and duration, with secrets and sensitive payloads redacted.
+
+**Security and scope**
+- Never display a full saved credential. Show only configured/masked status, plus Replace/Remove controls.
+- Store credentials encrypted at rest in protected server-side secret storage. Project configuration stores an opaque secret reference and connector metadata, not the raw key.
+- The UI may submit a new credential only through the protected credential-save flow; do not persist it in browser storage, client telemetry or ordinary application state after save.
+- Do not put secrets in chat, model context, frontend bundles, repository files or ordinary logs.
+- New credentials are project-scoped by default. Attaching an existing account-level credential requires explicit confirmation and a visible project-scope summary.
+- Removing a project binding does not silently revoke a credential used by other projects.
+
+## 13. Screen L — Global Settings
+
+Global Settings covers application-wide preferences rather than project tool connections:
+- General: account/session and application defaults.
+- Appearance: Light/Dark theme and Comfortable/Compact density.
+- Application behavior: default mode/model-routing preference where the project has no override.
+- Security overview: summary of credential storage and active sessions, without exposing secret values.
+
+**Project-specific settings are not configured here.** The operator manages project tools, API keys, model providers and project repository connections from Project Settings → Integrations & APIs (with repository/access detail available in its own project settings subsection).
+
+Settings must clearly distinguish a default preference from a hard security policy or current external provider limitation.
+
+## 14. Screen M — Approval request
+
+    ┌────────────────────────────────────────────────┐
+    │ Approval required                              │
+    │ Production deployment                           │
+    │                                                 │
+    │ Project: Project A                              │
+    │ Target: production / selected provider          │
+    │ Reason: publish approved application build      │
+    │ Impact: externally visible application change   │
+    │ Reversible: provider rollback supported/unknown │
+    │                                                 │
+    │ [View deployment plan and diff]                 │
+    │                                                 │
+    │ [Reject]                       [Approve action] │
+    └────────────────────────────────────────────────┘
+
+Approval copy must be specific, plain language, and operation-bound. Avoid ambiguous generic buttons such as "Allow everything".
+
+## 15. Screen N — Task Report
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │ Task Report                              Completed with issues│
+    ├───────────────────────────────────────────────────────────────┤
+    │ Requested outcome                                             │
+    │ Summary of work                                                │
+    │                                                               │
+    │ Files changed / branch / commit / PR                          │
+    │ Tests actually executed                                        │
+    │ Screenshots and browser evidence                               │
+    │ Warnings, failed checks, untested areas                       │
+    │                                                               │
+    │ Recommended next action                                       │
+    └───────────────────────────────────────────────────────────────┘
+
+Report sections must link to underlying files, tool events, test runs, and artifacts where available.
+
+## 16. Screen acceptance
+
+The screen set is structurally complete when:
+- Primary operator journeys have a dedicated screen or clear component.
+- Project context is not lost between chat and IDE surfaces.
+- Every asynchronous operation has visible status and failure behavior.
+- Approval screens show target, impact, and exact action.
+- No screen claims a connection, test, preview, or deployment exists without evidence.
+- Responsive equivalents are defined in the interaction specification.
+
+
+## 17. Screen O — Design Workspace
+
+    ┌────────────────────────────────────────────────────────────────────┐
+    │ Project A / Design             Version: Draft v3     [Review] [Save]│
+    ├────────────────────┬───────────────────────────────┬───────────────┤
+    │ DESIGN STAGES      │ CANVAS / SCREEN                │ DESIGN BRIEF  │
+    │                    │                                │               │
+    │ Brief              │  [Desktop] [Tablet] [Mobile]   │ Product       │
+    │ UX Structure       │                                │ Target users  │
+    │ Wireframes         │     Selected editable screen   │ Constraints   │
+    │ Visual System      │                                │ Requirements  │
+    │ Screens            │                                │               │
+    │ Prototype          │                                │ Tokens        │
+    │ Review             │                                │ Components    │
+    │ Handoff            │                                │ Findings      │
+    │                    │                                │               │
+    ├────────────────────┴───────────────────────────────┴───────────────┤
+    │ [Ask Designer] [Compare versions] [Preview prototype] [Export]     │
+    └────────────────────────────────────────────────────────────────────┘
+
+Required elements:
+- Visible design stages and per-stage status.
+- Editable screen/frame canvas or rendered native design preview.
+- Screen and viewport selection.
+- Brief, requirement and reference panel.
+- Component/token inspector.
+- Agent activity and design review findings.
+- Version history and comparison.
+- Prototype preview and handoff controls.
+- External tool connection state (Figma/Penpot) without blocking native design work.
+
+States:
+- No design brief yet.
+- Brief ready for review.
+- UX structure in progress.
+- Wireframe draft.
+- Visual system draft.
+- Screens generating.
+- Prototype ready.
+- Review findings present.
+- Awaiting owner approval.
+- Approved design.
+- External design tool unavailable/permission denied.
+- Design revision in progress.
+
+The screen must distinguish design preview from a running application preview. A design screen cannot claim to be tested code.
+
+## 18. Screen acceptance extension
+
+- Design Workspace stages are visible and understandable.
+- The operator can inspect/edit the brief and generated design artifacts.
+- Prototype status is distinguishable from a live running application.
+- Design versions and approval state are visible.
+- Figma/Penpot connectivity is optional; the native design experience remains usable.

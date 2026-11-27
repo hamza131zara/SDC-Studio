@@ -14,10 +14,10 @@ This is the source of truth for project progress. Update it after meaningful cha
 **Phase 0:** Accepted and merged  
 **Phase 1:** Accepted, merged, and frozen  
 **Application implementation:** Not started  
-**UI/UX design:** Not started  
+**UI/UX design:** Design specifications and design-agent architecture prepared; clickable prototype and owner review pending  
 **Deployment:** Not started
 
-The repository contains the approved foundation and the Phase 1 documentation draft. It does not yet contain a working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter.
+The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 specifications are drafted on the active branch; the clickable prototype and owner acceptance remain pending. The design-tool access assessment is recorded in design/07-DESIGN-AGENT-ARCHITECTURE.md. No working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter exists yet.
 
 ## 2. Verified GitHub state
 
@@ -35,6 +35,11 @@ The repository contains the approved foundation and the Phase 1 documentation dr
 | Phase 1 merge commit | b3ebadd4065400b4155c15469b016520a692d987 |
 | Phase 1 merge date | 2026-11-27 |
 | Phase 1 merge state | Merged and frozen |
+| Phase 2 branch | phase-2/ui-ux-design |
+| Phase 2 PR | #3 — open, draft, not merged |
+| Phase 2 PR base | main |
+| Phase 2 changed files | Recheck live PR #3 changed-file count |
+| Phase 2 PR head | Dynamic; verify current branch/PR head from GitHub before subsequent writes |
 
 The Phase 0 merge SHA is immutable historical evidence. Phase 1 branch head, ahead/behind counts, changed-file count, checks, and mergeability are changing GitHub state; retrieve them from GitHub before the next operation.
 
@@ -106,9 +111,43 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | Owner review | **Accepted** | Owner approved Phase 1 on 2026-11-27 |
 | PR #2 merge | **Done** | Squash merge commit b3ebadd4065400b4155c15469b016520a692d987 |
 
-## 7. Current next action
+## 7. Phase 2 — UI/UX Design progress
 
-**Immediate next action:** Execute Phase 2 UI/UX Design work items P2-01 through P2-10 on branch phase-2/ui-ux-design. Deliver information architecture, user journeys, screen layouts, responsive behavior, design system, interaction prototype specification, and design acceptance package. Do not start Phase 3 application implementation until the owner approves Phase 2.
+**Current branch:** phase-2/ui-ux-design  
+**Status:** Design specifications and design-agent architecture drafted; interaction prototype and owner acceptance remain pending. Current tool access has been assessed and documented.
+
+| Work item | Status | Evidence / pending action |
+|---|---|---|
+| P2-01 — Information architecture | Draft prepared | design/01-INFORMATION-ARCHITECTURE.md |
+| P2-02 — Core user journeys | Draft prepared | design/02-USER-JOURNEYS.md |
+| P2-03 — Main application shell | Draft prepared | design/03-SCREEN-WIREFRAMES.md |
+| P2-04 — Chat experience | Draft prepared | design/03-SCREEN-WIREFRAMES.md; design/05-INTERACTION-RESPONSIVE-SPEC.md |
+| P2-05 — Project workspace | Draft prepared | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
+| P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
+| P2-07 — Settings and integrations | Requirements specified; prototype validation pending | Project Settings → Integrations & APIs for multi-tool setup, protected credentials, Test Connection, Check Status, explicit Run Sample Request, project scopes and auditable usage |
+| P2-08 — Design system | Owner preferences confirmed; visual proposal pending review | Both themes with OS-first/manual persistence; Comfortable default, Compact optional; brand accent and workspace navigation remain open |
+| P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; preferred free-first canvas is Penpot after its MCP is connected; Product Design requires Work mode |
+| P2-10 — Design review and acceptance | **Pending prototype review** | Review editable screens, prototype, final SDC branding and workspace navigation; theme/density decisions are confirmed |
+| P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; adapter strategy and live account-access constraints documented |
+
+### Current design decisions and assumptions
+
+- Desktop-first developer workspace with responsive tablet/mobile behavior.
+- Both Light and Dark themes are available; first visit follows OS preference, then the app remembers the last manual selection.
+- Comfortable density is the default; Compact is optional through one global preference; no per-panel override is planned for Phase 2.
+- Final SDC logo/accent remains provisional.
+- Figma is installed/connected, but the authenticated account has View seats on two Starter teams; Figma Design canvas writing is not available under this access. Figma Make in Drafts may be tested only if enabled for the account and is not a shareable handoff for a View seat.
+- Penpot is the preferred free-first editable canvas to evaluate. Its official cloud tier is advertised as free and its official MCP can edit native design objects, but Penpot MCP is not connected to this ChatGPT session yet.
+- Product Design is installed in ChatGPT; its full ideation/prototype workflow requires ChatGPT Work mode, not this standard Chat mode. It is an assisted workflow, not an SDC Studio runtime dependency.
+- MagicPath is installed/connected but the current account reports zero credits and no free plan, so it is not a viable free-first dependency now.
+- Canva is installed for supporting visual assets/brand collateral, not as the canonical complex UI design source.
+- tldraw has been suggested for connection as an architecture/flow diagram tool; it is not connected until the owner accepts the connection.
+- Project Settings → Integrations & APIs is the required project-level management location for configuring multiple tools, API credentials/authentication, connection checks and status.
+- Phase 2 only designs/simulates this management flow; no real API keys are collected, no third-party APIs are called and no functional integration is implemented.
+
+## 8. Current next action
+
+**Immediate next action:** Produce the editable clickable prototype from design/08-PROTOTYPE-DESIGN-BRIEF.md using Penpot MCP in a supported MCP client, or Product Design in ChatGPT Work mode. The prototype must include Project Settings → Integrations & APIs: select a platform, configure a mock credential/auth method, test/check status where supported, demonstrate the separate sample API request action and show later tool-call activity. The current standard Chat and Figma View seat cannot author the required editable Figma Design canvas. After producing the prototype, run the flow/visual audit, update the design package and request owner approval. Theme and density preferences are confirmed. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
 Do not:
 - Start Phase 3 application implementation before Phase 2 design approval.
@@ -118,7 +157,7 @@ Do not:
 - Implement the runner, browser preview, QA engine, or deployment adapters.
 - Expand Phase 2 beyond design deliverables without owner approval.
 
-## 8. Documentation completeness boundary
+## 9. Documentation completeness boundary
 
 Phase 1 is intended to provide a comprehensive planning and control baseline. It does not invent implementation-specific facts that are not yet known.
 
@@ -126,7 +165,7 @@ Finalize exact REST routes and API schemas when backend modules are implemented;
 
 These details are deferred intentionally and must be added to the relevant implementation documentation when verified.
 
-## 9. Risks and constraints
+## 10. Risks and constraints
 
 | Risk/constraint | Current handling | Revisit phase |
 |---|---|---|
@@ -139,7 +178,7 @@ These details are deferred intentionally and must be added to the relevant imple
 | Literal zero restrictions cannot override external provider/platform/legal controls | Target maximum practical freedom within authorized boundaries | All phases |
 | Architecture choices may need validation | Decisions marked provisional/pending until evidence exists | Relevant implementation phase |
 
-## 10. Progress history
+## 11. Progress history
 
 | Date | Event | Evidence |
 |---|---|---|
@@ -155,8 +194,20 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Owner approved Phase 1 Detailed Documentation | Explicit approval in project conversation |
 | 2026-11-27 | Phase 1 PR #2 merged and documentation baseline frozen | Merge commit b3ebadd4065400b4155c15469b016520a692d987 |
 | 2026-11-27 | Phase 2 UI/UX Design branch created | phase-2/ui-ux-design |
+| 2026-11-27 | Phase 2 design PR #3 opened as draft | Design specifications only; P2-09 clickable prototype remains pending |
+| 2026-11-27 | Phase 2 information architecture, journeys, screen wireframes, design system and responsive interaction specs drafted | design/01 through design/06 |
+| 2026-11-27 | Clickable prototype remains pending | P2-09 |
+| 2026-11-27 | Figma account access assessed: View seats on Starter teams; Design canvas write unavailable under current seat | design/07-DESIGN-AGENT-ARCHITECTURE.md |
+| 2026-11-27 | Penpot selected as preferred free-first editable design canvas to evaluate; MCP not connected yet | design/07-DESIGN-AGENT-ARCHITECTURE.md |
+| 2026-11-27 | Product Design full workflow identified as Work-mode only; MagicPath has zero credits; tldraw suggested but not connected | design/07-DESIGN-AGENT-ARCHITECTURE.md |
+| 2026-11-27 | Owner selected both themes with last manual choice remembered and Comfortable density by default | design/04-DESIGN-SYSTEM.md |
+| 2026-11-27 | AI design workflow and Figma/Penpot integration architecture drafted | design/07-DESIGN-AGENT-ARCHITECTURE.md |
+| 2026-11-27 | SDC Studio prototype design brief prepared for Product Design app | design/08-PROTOTYPE-DESIGN-BRIEF.md |
+| 2026-11-27 | Product Design app connection confirmed by owner | Use for brief refinement, flow audit and interactive prototype assistance; not an SDC Studio runtime integration |
+| 2026-11-27 | Owner clarified that multiple external tools/APIs must be configured per project, with protected credentials, test/status checks and auditable calls | Project Settings → Integrations & APIs; design/01 through design/08 |
 
-## 11. Status maintenance procedure
+
+## 12. Status maintenance procedure
 
 Whenever progress changes:
 1. Verify actual repository branch, commit, PR, and file state.

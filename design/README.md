@@ -1,0 +1,91 @@
+# SDC Studio — Phase 2 UI/UX Design Package
+
+**Phase:** 2 — UI/UX Design  
+**Status:** Design draft for owner review  
+**Branch:** phase-2/ui-ux-design  
+**Review:** [Draft PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3)  
+**Foundation:** Phase 0 and Phase 1 accepted and merged into main  
+**Boundary:** Design artifacts only. No application source code, backend implementation, AI provider integration, GitHub App implementation, runner, preview engine, or deployment code is part of this phase.
+
+## Design package
+
+1. [Information Architecture](./01-INFORMATION-ARCHITECTURE.md)
+2. [User Journeys](./02-USER-JOURNEYS.md)
+3. [Screen Wireframes](./03-SCREEN-WIREFRAMES.md)
+4. [Visual Design System](./04-DESIGN-SYSTEM.md)
+5. [Interaction and Responsive Specification](./05-INTERACTION-RESPONSIVE-SPEC.md)
+6. [Design Acceptance Criteria](./06-DESIGN-ACCEPTANCE.md)
+7. [AI Design Workflow and Integration Architecture](./07-DESIGN-AGENT-ARCHITECTURE.md)
+8. [Prototype Design Brief](./08-PROTOTYPE-DESIGN-BRIEF.md)
+
+## Core experience
+
+SDC Studio combines:
+- A ChatGPT/Claude-style conversation experience.
+- A project-centric workspace connected to blank/local/GitHub repositories.
+- An IDE-style surface for files, diffs, terminal, preview, QA, evidence, and reports.
+- A visible agent activity timeline and owner-controlled approval flow.
+
+The interface must keep the conversation as the primary way to express intent while giving the operator clear visibility into project state and agent operations.
+
+## Prototype brief
+
+Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canonical prompt/brief when working with the connected Product Design app or another approved design tool.
+
+## Owner-selected design preferences
+
+- Theme: **Both**, with Dark and Light modes available; follow the operating-system preference on first visit and remember the operator's last manual selection.
+- Density: **Comfortable by default**; offer Compact as an optional preference for information-dense workspace surfaces.
+
+## Design status
+
+| Work item | Status |
+|---|---|
+| P2-01 Information architecture | Draft prepared |
+| P2-02 Core user journeys | Draft prepared |
+| P2-03 Main application shell | Draft prepared |
+| P2-04 Chat experience | Draft prepared |
+| P2-05 Project workspace | Draft prepared |
+| P2-06 Execution transparency | Draft prepared |
+| P2-07 Settings and integrations | Project-scoped multi-tool/API management specified; prototype validation pending |
+| P2-08 Design system | Draft prepared; theme and density preference recorded |
+| P2-09 Interaction prototype | Canonical prototype brief prepared; interactive prototype pending |
+| P2-10 Design review and acceptance | Pending owner review |
+| P2-11 AI design workflow and integration architecture | Draft prepared; Product Design app workflow recorded |
+
+## Confirmed owner preferences
+
+- Both Light and Dark themes; follow the OS preference on first visit and remember the last manual selection.
+- Comfortable workspace density by default; Compact is optional and uses one global setting.
+- Theme and density are independent preferences.
+
+## Remaining design assumptions for review
+
+- Desktop-first composition because the primary workflow involves code, diffs, terminal, and preview side-by-side.
+- Responsive tablet/mobile support for conversation, task status, reports, and approvals; full multi-pane development is optimized for desktop.
+- Neutral visual foundation; final brand accent and logo can be aligned with SDC branding during owner review.
+- One operator-focused private product; no public signup, billing, team administration, or customer tenancy screens.
+
+These assumptions do not change the approved product scope. Owner feedback may adjust visual styling and layout within the existing product requirements.
+
+## Design-tool access and recommendation
+
+- **Preferred free-first editable design canvas:** Penpot, after connecting its official MCP in a supported MCP client. The cloud tier is advertised as free; exact limits must be verified during setup.
+- **Figma:** currently connected, but the available teams report View seats on Starter plans; do not expect Figma Design canvas writes without Full-seat access.
+- **Product Design:** use in ChatGPT Work mode for visual ideation, flow audits and prototype workflows; not a normal Chat-mode workflow or SDC Studio runtime dependency.
+- **MagicPath:** connected but the account currently reports zero credits and no free plan; optional only if access changes.
+- **tldraw:** suggested for system/agent diagrams; user connection is still pending.
+- **Canva:** supporting graphics and brand collateral, not primary app UI source of truth.
+
+Full tool-access notes and references are in [07-DESIGN-AGENT-ARCHITECTURE.md](./07-DESIGN-AGENT-ARCHITECTURE.md).
+
+## Remaining Phase 2 work
+
+- Connect Penpot MCP in a supported MCP client (or use Product Design in ChatGPT Work mode) and create the clickable prototype covering the primary journeys listed in the interaction specification, including Project Settings → Integrations & APIs for multi-platform connection setup, safe test/status checks and explicit sample API requests.
+- Review the provisional visual direction, final SDC brand accent/logo and workspace navigation choice with the owner.
+- Validate the complete design package against the acceptance checklist.
+- Record approved/deferred decisions and obtain owner acceptance.
+
+## Phase gate
+
+Phase 2 is complete only after the owner reviews and accepts the design package. Phase 3 application shell implementation must not begin before this approval.

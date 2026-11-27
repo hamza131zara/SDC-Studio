@@ -26,6 +26,10 @@ This folder is the detailed reference set for requirements, workflows, architect
 12. [Architecture and product decision log](./12-DECISION-LOG.md)
 13. [Agent roles and tool catalog](./13-AGENT-AND-TOOL-CATALOG.md)
 
+## Current phase design package
+
+The active Phase 2 design work is maintained separately under [design/README.md](../design/README.md). The AI design pipeline and Figma/Penpot integration architecture is documented in [07-DESIGN-AGENT-ARCHITECTURE.md](../design/07-DESIGN-AGENT-ARCHITECTURE.md). The canonical prototype brief is in [08-PROTOTYPE-DESIGN-BRIEF.md](../design/08-PROTOTYPE-DESIGN-BRIEF.md). The Phase 1 requirements and security baseline remain authoritative.
+
 ## Quality and integrations
 
 14. [Testing and QA strategy](./14-TESTING-AND-QA-STRATEGY.md)
