@@ -122,17 +122,17 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 
 | Work item | Status | Evidence / pending action |
 |---|---|---|
-| P2-01 — Information architecture | Draft prepared | design/01-INFORMATION-ARCHITECTURE.md |
-| P2-02 — Core user journeys | Draft prepared | design/02-USER-JOURNEYS.md |
-| P2-03 — Main application shell | Draft prepared | design/03-SCREEN-WIREFRAMES.md |
-| P2-04 — Chat experience | Draft prepared | design/03-SCREEN-WIREFRAMES.md; design/05-INTERACTION-RESPONSIVE-SPEC.md |
-| P2-05 — Project workspace | Draft prepared | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
-| P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
-| P2-07 — Settings and integrations | Requirements specified; prototype validation pending | Project Settings → Integrations & APIs for multi-tool setup, protected credentials, Test Connection, Check Status, explicit Run Sample Request, project scopes and auditable usage |
-| P2-08 — Design system | Owner preferences confirmed; visual proposal pending review | Both themes with OS-first/manual persistence; Comfortable default, Compact optional; brand accent and workspace navigation remain open |
-| P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; preferred free-first canvas is Penpot after its MCP is connected; Product Design requires Work mode |
-| P2-10 — Design review and acceptance | **Pending prototype review** | Review editable screens, prototype, final SDC branding and workspace navigation; theme/density decisions are confirmed |
-| P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; adapter strategy and live account-access constraints documented |
+| P2-01 — Information architecture | Accepted | design/01-INFORMATION-ARCHITECTURE.md |
+| P2-02 — Core user journeys | Accepted | design/02-USER-JOURNEYS.md |
+| P2-03 — Main application shell | Accepted | design/03-SCREEN-WIREFRAMES.md |
+| P2-04 — Chat experience | Accepted | design/03-SCREEN-WIREFRAMES.md; design/05-INTERACTION-RESPONSIVE-SPEC.md |
+| P2-05 — Project workspace | Accepted | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
+| P2-06 — Execution transparency | Accepted | Activity, task plan, tool event and approval screens specified |
+| P2-07 — Settings and integrations | Accepted; prototype validation waived | Project integrations catalog, protected credentials, supported connection checks, sample requests and audit requirements specified |
+| P2-08 — Design system | Accepted; visual refinement deferred | Both themes and density preferences confirmed; final brand accent/logo and workspace navigation polish deferred |
+| P2-09 — Interaction prototype | **Waived by owner; deferred** | Brief exists; interactive prototype was not created |
+| P2-10 — Design review and acceptance | **Accepted with recorded exception** | Owner accepted the written design package on 2026-11-27 |
+| P2-11 — AI design workflow and integration architecture | Accepted | design/07-DESIGN-AGENT-ARCHITECTURE.md; design-tool access and adapter strategy documented |
 
 ### Current design decisions and assumptions
 
@@ -156,10 +156,12 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 
 | Work item | Status | Evidence / next action |
 |---|---|---|
-| P3-01 — Repository/app bootstrap | **In progress** | Add pnpm workspace, pinned toolchain, strict TypeScript baseline, ESLint/Prettier configuration and CI; generate the lockfile and validate install/checks locally |
-| P3-02 to P3-11 | Not started | Start after P3-01 is reproducible and accepted |
+| P3-01 — Repository/app bootstrap | **In progress — configuration drafted; validation pending** | Root package/workspace, Node and pnpm pins, strict TypeScript base, ESLint/Prettier, editor/Git ignores and initial CI workflow added. No pnpm-lock.yaml yet; local install, lint, format check and CI have not been run/verified. |
+| P3-02 to P3-11 | Not started | Start after P3-01 has a committed lockfile and reproducible install/check evidence |
 
-**Immediate next action:** Finish P3-01, create and commit pnpm-lock.yaml using the pinned pnpm version, then run install, lint and formatting checks. Do not start P3-02 application UI until the bootstrap passes review.
+**Immediate next action:** Run `pnpm install` using pnpm 12.19.0 on the local development machine to generate `pnpm-lock.yaml`; commit it, change CI to `pnpm install --frozen-lockfile`, and run lint/format checks. Do not start P3-02 application UI until the bootstrap passes review.
+
+The CI workflow's current `--no-frozen-lockfile` install is explicitly temporary and must be hardened after the first lockfile is committed. No test or CI result is claimed at this stage.
 
 Phase 2 is closed. Phase 3 may implement the approved application shell only. Later phases still own AI provider orchestration, the product GitHub App, isolated execution runner, browser preview/QA engine, and deployment adapters; do not pull those modules into P3-01.
 
@@ -213,6 +215,7 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Owner clarified that multiple external tools/APIs must be configured per project, with protected credentials, test/status checks and auditable calls | Project Settings → Integrations & APIs; design/01 through design/08 |
 | 2026-11-27 | Owner accepted Phase 2 written design package and waived P2-09 clickable prototype as a phase gate | PR #3 merge commit 07f9e0313bebb5ad604c9fd51f031a303edfc647; prototype remains deferred |
 | 2026-11-27 | Phase 3 branch created from merged main; P3-01 started | phase-3/application-shell |
+| 2026-11-27 | P3-01 bootstrap configuration drafted: pnpm workspace, pinned root toolchain, strict TypeScript, ESLint/Prettier, editor/Git ignores and initial CI workflow | phase-3/application-shell; pnpm-lock.yaml and executable validation remain pending |
 
 
 ## 12. Status maintenance procedure
