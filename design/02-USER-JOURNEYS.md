@@ -38,8 +38,8 @@
 
 ## 3. Journey C — Connect a GitHub repository
 
-1. Operator opens Integrations or project repository settings.
-2. Selects Connect GitHub.
+1. Operator opens the project and selects Project Settings → Integrations & APIs (or Repository & Access).
+2. Selects GitHub / Source Control → Connect.
 3. If the product GitHub App is not installed, operator is directed to GitHub authorization.
 4. Operator selects only repositories to grant.
 5. SDC Studio displays the actual installation scope and granted permissions.
@@ -124,17 +124,22 @@
 
 **Success state:** Operator can resume the next task without reconstructing the prior session.
 
-## 9. Journey I — Configure models/providers
+## 9. Journey I — Configure project models and providers
 
-1. Operator opens Settings → Models and Providers.
-2. Sees configured providers and enabled models.
-3. Adds or edits a provider credential through protected input.
-4. UI displays connection/test status without revealing full credential.
-5. Operator chooses default model or automatic routing.
-6. Provider quota, unavailable state, or data-term notice is visible where available.
-7. Operator can disable a provider or select a different configured model.
+1. Operator opens the intended project.
+2. Selects Project Settings → Integrations & APIs → AI / Model Providers.
+3. Sees supported provider connections, whether each is configured for this project, available model capabilities and current test/status evidence.
+4. Selects a provider/platform and reviews its supported authentication method.
+5. Enters the API key in the protected credential field when API-key authentication is supported, or completes the provider's supported OAuth/token/local-endpoint flow.
+6. Saves the credential into protected storage and binds its secret reference to the current project.
+7. Runs a safe Test Connection / Check Status action where the provider adapter supports one; a real sample model request is separate and may incur usage charges.
+8. Sees the actual result, checked-at time, latency and quota information only where available.
+9. Selects the project default provider/model or leaves routing automatic.
+10. Enables the connection for the project and reviews the data-handling notice when required.
 
-**Success state:** Model choice is explicit and does not change the selected operating mode or autonomy level.
+**Success state:** The selected provider is configured and its status is represented truthfully for this project. The full credential is never shown again. Model choice remains independent of operating mode and execution autonomy.
+
+**Error states:** Invalid credential, insufficient scope, expired authorization, rate limit, quota exhaustion, unsupported status endpoint or provider outage. Preserve non-secret configuration and show the actual recovery action.
 
 ## 10. Journey J — Review deployment recommendation
 
@@ -194,7 +199,35 @@ All journeys must define:
 
 **Fallback states:** If Figma/Penpot is unavailable, use the native design artifact model and preview. If vision-capable model access is unavailable, disclose that visual critique is limited. If required brand/reference input is missing, record the assumption instead of inventing brand rules.
 
-## 14. Journey L — Revise an existing design
+## 15. Journey M — Add and manage a project tool/API connection
+
+**Goal:** Configure multiple supported external platforms/tools for one project, verify their connection where possible, and make approved operations available to the project's workflows.
+
+1. Operator opens the target project.
+2. Selects Project Settings → Integrations & APIs.
+3. Sees the integration catalog grouped by purpose: AI/model providers, development/design tools, source control, testing/browser, hosting/deployment, research/search and other supported tools.
+4. Searches or selects a platform/tool card.
+5. Opens its details: purpose, available adapter operations, supported authentication methods, required scopes, data sent, status-check support and any known usage/cost implications.
+6. Chooses an authentication method supported by that adapter. Options may include API key, OAuth, provider-issued token/PAT, or a local service endpoint; do not assume every platform uses an API key.
+7. Enters the key/token into a masked credential field or completes the supported authorization flow. The prototype uses mock values only and must never request a real secret.
+8. Saves the credential in protected storage and binds the credential reference and integration configuration to the selected project. Reuse of an existing account-level credential requires an explicit attach-to-project action and scope summary.
+9. Operator selects **Test Connection** or **Check Status** when the adapter exposes a safe, supported check. The platform reports only a real test result. If no safe check exists, clearly show that connection testing is unsupported rather than inferring success from a saved key.
+10. If verification requires a billable API/model call, show that fact and any known cost/usage implication before the operator explicitly starts the sample request.
+11. On success, the integration card shows the verified state, last checked time, supported capabilities and quota/usage fields only where the platform exposes them.
+12. Operator enables or disables specific supported capabilities for the current project, subject to the platform's security and approval policy.
+13. When an agent later uses the integration, the Activity timeline records the platform, operation, target scope, result and duration without exposing credentials or sensitive payloads.
+14. Operator can re-test, replace the credential, reauthorize, disable, or disconnect/remove the project binding.
+
+**Success state:** The project has multiple independently configurable integrations with clear configured/verified/disabled states, project-level scope and auditable tool usage.
+
+**Important boundaries:**
+- A stored key is not proof that a connection works.
+- A successful connection check is not proof that every operation is authorized or available.
+- Only adapter-supported operations may be called; do not invent universal API behavior.
+- Do not place keys in prompts, chat messages, repository files, frontend bundles or ordinary logs.
+- Removing a project binding must not revoke a separately shared account credential unless the operator explicitly chooses to revoke that credential too.
+
+## 16. Journey L — Revise an existing design
 
 1. Operator selects an existing design version or connects a supported design file.
 2. Agent reads available frames, components, variables and metadata under granted permissions.
