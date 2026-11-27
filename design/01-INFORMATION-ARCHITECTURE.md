@@ -48,7 +48,7 @@ The center area changes according to route/context:
 - Conversation.
 - Project overview.
 - Project workspace.
-- Settings/integrations.
+- Project Settings (inside an active project) and Global Settings (application-wide).
 - Task/report detail.
 
 ### Context/workspace panel
