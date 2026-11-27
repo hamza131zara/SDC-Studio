@@ -26,8 +26,8 @@
 | Phase | Name | Status at this revision | Main deliverable |
 |---|---|---|---|
 | 0 | Foundation | Accepted and merged | Approved product and architecture foundation |
-| 1 | Documentation | In progress; draft PR #2 | Full approved-project documentation baseline |
-| 2 | UI/UX Design | Not started | Approved user flows, wireframes, design system and screen designs |
+| 1 | Documentation | Accepted and merged; PR #2 | Frozen project documentation baseline; merge commit b3ebadd4065400b4155c15469b016520a692d987 |
+| 2 | UI/UX Design | In progress; branch phase-2/ui-ux-design | Approved user flows, wireframes, design system and screen designs |
 | 3 | Application Shell | Not started | Running web shell, core navigation, projects, conversations and settings |
 | 4 | AI Gateway and Orchestration | Not started | Working multi-provider model gateway and task orchestrator |
 | 5 | GitHub and Project Workspaces | Not started | Authorized repository selection, discovery, branches and controlled writes |
@@ -54,9 +54,11 @@ The statuses above are a record of the repository state at the date shown in PRO
 
 **Exit:** Accepted by owner and merged. Do not reopen unless a material requirement or technical constraint requires a controlled foundation change.
 
-## 4. Phase 1 — Documentation (current phase)
+## 4. Phase 1 — Documentation (accepted and merged)
 
 **Objective:** Turn the approved foundation into detailed, searchable, traceable documentation that can guide implementation and preserve project memory.
+
+**Acceptance record:** Owner approved on 2026-11-27. PR #2 merged to main with squash merge commit b3ebadd4065400b4155c15469b016520a692d987. The Phase 1 documentation baseline is frozen.
 
 ### Work items
 
