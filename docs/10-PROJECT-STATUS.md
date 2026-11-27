@@ -39,7 +39,7 @@ The repository contains the approved Phase 0 foundation and frozen Phase 1 docum
 | Phase 2 PR | #3 — open, draft, not merged |
 | Phase 2 PR base | main |
 | Phase 2 changed files | 11 at latest PR check |
-| Phase 2 PR head | e86803ffa9c7cbbf96fbf16c13a39f457f96c132 at PR creation; recheck live SHA before later writes |
+| Phase 2 PR head | Dynamic; verify the current branch/PR head from GitHub before any subsequent write |
 
 The Phase 0 merge SHA is immutable historical evidence. Phase 1 branch head, ahead/behind counts, changed-file count, checks, and mergeability are changing GitHub state; retrieve them from GitHub before the next operation.
 
