@@ -146,7 +146,7 @@ The statuses above are a record of the repository state at the date shown in PRO
 | P2-06 | Draft prepared | Activity, tool events and approval states specified |
 | P2-07 | Draft prepared | Provider/GitHub settings and integration screens specified |
 | P2-08 | Draft prepared | design/04-DESIGN-SYSTEM.md |
-| P2-09 | Pending | Create clickable prototype for primary journeys |
+| P2-09 | Brief ready; prototype pending | Use design/08-PROTOTYPE-DESIGN-BRIEF.md with the connected Product Design app; obtain editable screens and clickable user flows |
 | P2-10 | Pending owner review | Review theme/branding and accept complete package |
 | P2-11 | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; owner review pending |
 
