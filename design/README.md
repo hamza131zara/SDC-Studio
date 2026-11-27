@@ -37,7 +37,7 @@ The interface must keep the conversation as the primary way to express intent wh
 | P2-06 Execution transparency | Draft prepared |
 | P2-07 Settings and integrations | Draft prepared |
 | P2-08 Design system | Draft prepared |
-| P2-09 Interaction prototype specification | Draft prepared |
+| P2-09 Interaction prototype | Specification drafted; clickable prototype pending |
 | P2-10 Design review and acceptance | Pending owner review |
 
 ## Design assumptions requiring owner review
@@ -49,6 +49,13 @@ The interface must keep the conversation as the primary way to express intent wh
 - One operator-focused private product; no public signup, billing, team administration, or customer tenancy screens.
 
 These assumptions do not change the approved product scope. Owner feedback may adjust visual styling and layout within the existing product requirements.
+
+## Remaining Phase 2 work
+
+- Create the clickable prototype covering the primary journeys listed in the interaction specification.
+- Review the provisional visual direction and brand accent with the owner.
+- Validate the complete design package against the acceptance checklist.
+- Record approved/deferred decisions and obtain owner acceptance.
 
 ## Phase gate
 
