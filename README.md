@@ -7,11 +7,11 @@ Private AI-powered software engineering platform for agency workflows. Multi-age
 - Phase 0 — Foundation: **accepted and merged**
 - Phase 1 — Documentation: **approved, merged and frozen** (PR #2)
 - Current phase: **Phase 2 — UI/UX Design**
-- Phase 2 status: **design draft prepared; clickable prototype and approval pending**
+- Phase 2 status: **design specifications and design-agent architecture drafted; clickable prototype and approval pending**
 - Working branch: phase-2/ui-ux-design
 - Default branch: main
 - Application implementation: not started
-- UI/UX design: not started
+- UI/UX design: design draft prepared; prototype/review pending
 
 ## Approved foundation
 
@@ -19,7 +19,7 @@ See [Phase 0 Foundation](./PHASE-0-FOUNDATION.md) for product scope, the 10/10 l
 
 ## Current design work
 
-Phase 2 design draft: [PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3). See the [Phase 2 UI/UX Design Package](./design/README.md) for information architecture, user journeys, wireframes, visual design system, interactions, responsive behavior and design acceptance. The clickable prototype and owner approval remain pending.
+Phase 2 design draft: [PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3). See the [Phase 2 UI/UX Design Package](./design/README.md) for information architecture, user journeys, wireframes, visual design system, interactions, responsive behavior, and design-agent integration architecture. The clickable prototype and owner approval remain pending.
 
 ## Project documentation
 
