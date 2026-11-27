@@ -15,6 +15,7 @@
 4. [Visual Design System](./04-DESIGN-SYSTEM.md)
 5. [Interaction and Responsive Specification](./05-INTERACTION-RESPONSIVE-SPEC.md)
 6. [Design Acceptance Criteria](./06-DESIGN-ACCEPTANCE.md)
+7. [AI Design Workflow and Integration Architecture](./07-DESIGN-AGENT-ARCHITECTURE.md)
 
 ## Core experience
 
@@ -25,6 +26,11 @@ SDC Studio combines:
 - A visible agent activity timeline and owner-controlled approval flow.
 
 The interface must keep the conversation as the primary way to express intent while giving the operator clear visibility into project state and agent operations.
+
+## Owner-selected design preferences
+
+- Theme: **Both**, with Dark and Light modes available; follow the operating-system preference on first visit and remember the operator's last manual selection.
+- Density: **Comfortable by default**; offer Compact as an optional preference for information-dense workspace surfaces.
 
 ## Design status
 
@@ -37,9 +43,10 @@ The interface must keep the conversation as the primary way to express intent wh
 | P2-05 Project workspace | Draft prepared |
 | P2-06 Execution transparency | Draft prepared |
 | P2-07 Settings and integrations | Draft prepared |
-| P2-08 Design system | Draft prepared |
+| P2-08 Design system | Draft prepared; theme and density preference recorded |
 | P2-09 Interaction prototype | Specification drafted; clickable prototype pending |
 | P2-10 Design review and acceptance | Pending owner review |
+| P2-11 AI design workflow and integration architecture | Draft prepared |
 
 ## Design assumptions requiring owner review
 
