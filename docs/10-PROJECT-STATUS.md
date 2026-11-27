@@ -125,16 +125,16 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | P2-05 — Project workspace | Draft prepared | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
 | P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
 | P2-07 — Settings and integrations | Draft prepared | Integrations and Settings screens specified |
-| P2-08 — Design system | Draft prepared | Both themes; remember last manual selection; Comfortable default, Compact optional; brand accent remains provisional |
+| P2-08 — Design system | Owner preferences confirmed; visual proposal pending review | Both themes with OS-first/manual persistence; Comfortable default, Compact optional; brand accent and workspace navigation remain open |
 | P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; preferred free-first canvas is Penpot after its MCP is connected; Product Design requires Work mode |
-| P2-10 — Design review and acceptance | **Pending owner review** | Owner reviews design package and approves or requests corrections |
+| P2-10 — Design review and acceptance | **Pending prototype review** | Review editable screens, prototype, final SDC branding and workspace navigation; theme/density decisions are confirmed |
 | P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; adapter strategy and live account-access constraints documented |
 
 ### Current design decisions and assumptions
 
 - Desktop-first developer workspace with responsive tablet/mobile behavior.
 - Both Light and Dark themes are available; first visit follows OS preference, then the app remembers the last manual selection.
-- Comfortable density is the default; Compact is optional.
+- Comfortable density is the default; Compact is optional through one global preference; no per-panel override is planned for Phase 2.
 - Final SDC logo/accent remains provisional.
 - Figma is installed/connected, but the authenticated account has View seats on two Starter teams; Figma Design canvas writing is not available under this access. Figma Make in Drafts may be tested only if enabled for the account and is not a shareable handoff for a View seat.
 - Penpot is the preferred free-first editable canvas to evaluate. Its official cloud tier is advertised as free and its official MCP can edit native design objects, but Penpot MCP is not connected to this ChatGPT session yet.
@@ -146,7 +146,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 
 ## 8. Current next action
 
-**Immediate next action:** Choose the design-work path: (A) connect Penpot's official MCP in a supported MCP client and use design/08-PROTOTYPE-DESIGN-BRIEF.md as the canonical brief, or (B) switch to ChatGPT Work mode and run Product Design's ideation/prototyping workflow using that brief. The current standard Chat and Figma View seat cannot author the required editable Figma Design canvas. After producing the prototype, run the flow/visual audit, update the design package and request owner approval. Do not start Phase 3 application implementation until the owner approves the complete design package.
+**Immediate next action:** Produce the editable clickable prototype from design/08-PROTOTYPE-DESIGN-BRIEF.md using Penpot MCP in a supported MCP client, or Product Design in ChatGPT Work mode. The current standard Chat and Figma View seat cannot author the required editable Figma Design canvas. After producing the prototype, run the flow/visual audit, update the design package and request owner approval. Theme and density preferences are confirmed; no further choice is needed on those items. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
 Do not:
 - Start Phase 3 application implementation before Phase 2 design approval.
