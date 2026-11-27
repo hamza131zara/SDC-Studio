@@ -27,8 +27,8 @@
 |---|---|---|---|
 | 0 | Foundation | Accepted and merged | Approved product and architecture foundation |
 | 1 | Documentation | Accepted and merged; PR #2 | Frozen project documentation baseline; merge commit b3ebadd4065400b4155c15469b016520a692d987 |
-| 2 | UI/UX Design | In progress; branch phase-2/ui-ux-design | Approved user flows, wireframes, design system and screen designs |
-| 3 | Application Shell | Not started | Running web shell, core navigation, projects, conversations and settings |
+| 2 | UI/UX Design | Accepted and merged with owner-approved P2-09 prototype waiver; PR #3 | Accepted written design specifications, wireframes and integration architecture; clickable prototype deferred |
+| 3 | Application Shell | In progress; branch phase-3/application-shell | Running web shell, core navigation, projects, conversations and settings |
 | 4 | AI Gateway and Orchestration | Not started | Working multi-provider model gateway and task orchestrator |
 | 5 | GitHub and Project Workspaces | Not started | Authorized repository selection, discovery, branches and controlled writes |
 | 6 | Development and Execution | Not started | Isolated project runner, terminal, filesystem and task execution |
@@ -110,11 +110,13 @@ The statuses above are a record of the repository state at the date shown in PRO
 
 **Next phase after acceptance:** Phase 2 — UI/UX Design. Do not start it before the Phase 1 merge.
 
-## 5. Phase 2 — UI/UX Design (in progress)
+## 5. Phase 2 — UI/UX Design (accepted and merged with exception)
 
 **Objective:** Define the actual product experience before coding the interface.
 
-**Current branch:** phase-2/ui-ux-design. The information architecture, user journeys, screen wireframe specification, visual design system, interaction/responsive specification, and design acceptance criteria are drafted. The clickable prototype and owner design approval remain pending.
+**Acceptance record:** The owner accepted the written design specifications and design-agent architecture on 2026-11-27. PR #3 was squash-merged into main with commit 07f9e0313bebb5ad604c9fd51f031a303edfc647.
+
+**Owner-approved exception:** P2-09's editable clickable prototype was waived as a Phase 2 exit prerequisite. It was not created and remains deferred. Phase 3 proceeds from the accepted written information architecture, journeys, wireframes, interaction/responsive specifications and design acceptance package. Final SDC brand accent/logo and workspace navigation polish may be refined during implementation.
 
 ### Work items
 
@@ -138,23 +140,23 @@ The statuses above are a record of the repository state at the date shown in PRO
 
 | ID | Status | Evidence / next action |
 |---|---|---|
-| P2-01 | Draft prepared | design/01-INFORMATION-ARCHITECTURE.md |
-| P2-02 | Draft prepared | design/02-USER-JOURNEYS.md |
-| P2-03 | Draft prepared | design/03-SCREEN-WIREFRAMES.md |
-| P2-04 | Draft prepared | Composer, message stream, modes, models and autonomy states specified |
-| P2-05 | Draft prepared | Project workspace tabs and screen layouts specified |
-| P2-06 | Draft prepared | Activity, tool events and approval states specified |
-| P2-07 | Expanded requirements incorporated; prototype verification pending | Project Settings → Integrations & APIs with catalog, project-scoped credentials, test/status lifecycle and auditable tool calls |
-| P2-08 | Draft prepared | design/04-DESIGN-SYSTEM.md |
-| P2-09 | Brief ready; prototype pending | Connect Penpot MCP in a supported MCP client, or use Product Design in ChatGPT Work mode; create editable screens and clickable user flows from design/08-PROTOTYPE-DESIGN-BRIEF.md |
-| P2-10 | Pending prototype/visual review | Review editable prototype, final branding/navigation choices and accept complete package; theme/density preferences are confirmed |
-| P2-11 | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; current design-tool access and free-first adapter strategy documented |
+| P2-01 | Accepted | design/01-INFORMATION-ARCHITECTURE.md |
+| P2-02 | Accepted | design/02-USER-JOURNEYS.md |
+| P2-03 | Accepted | design/03-SCREEN-WIREFRAMES.md |
+| P2-04 | Accepted | Composer, message stream, modes, models and autonomy states specified |
+| P2-05 | Accepted | Project workspace tabs and screen layouts specified |
+| P2-06 | Accepted | Activity, tool events and approval states specified |
+| P2-07 | Accepted | Project Settings → Integrations & APIs, project-scoped credentials, test/status lifecycle and auditable tool calls specified; prototype validation waived |
+| P2-08 | Accepted with visual polish deferred | design/04-DESIGN-SYSTEM.md; theme and density preferences confirmed |
+| P2-09 | **Waived by owner; deferred** | Clickable prototype not created; written wireframes/specifications accepted as the Phase 3 implementation reference |
+| P2-10 | **Accepted with recorded exception** | Owner accepted the written design package on 2026-11-27 |
+| P2-11 | Accepted | design/07-DESIGN-AGENT-ARCHITECTURE.md; design-tool access and adapter strategy documented |
 
-**Exit:** Main screens and key interactions are approved; responsive and error/empty/loading states are specified; the clickable design prototype and design handoff are ready; owner approves Phase 2.
+**Exit record:** Owner accepted the written design package and authorized Phase 3 on 2026-11-27. The clickable prototype was explicitly waived and deferred; it is not a delivered artifact.
 
 **Not part of Phase 2:** Building backend APIs, connecting live AI providers, implementing GitHub, creating the actual execution runner, or writing production application code.
 
-## 6. Phase 3 — Application Shell (not started)
+## 6. Phase 3 — Application Shell (in progress)
 
 **Objective:** Implement the approved visual experience and core application structure without prematurely building the full agent engine.
 
@@ -174,7 +176,14 @@ The statuses above are a record of the repository state at the date shown in PRO
 | P3-10 | Task status event foundation | Persist task records and render state/event timeline |
 | P3-11 | Application shell QA | Browser tests, responsive screenshots, accessibility and regression checks |
 
-**Dependencies:** Phase 2 approved design.
+**Dependencies:** Phase 2 written design package accepted by owner; P2-09 prototype waiver recorded above.
+
+### Current work-item status
+
+| ID | Status | Evidence / next action |
+|---|---|---|
+| P3-01 | **In progress** | Establish pnpm monorepo, pinned toolchain, strict TypeScript baseline, lint/format configuration and CI workflow; generate and commit the lockfile, then verify on the local development environment |
+| P3-02 to P3-11 | Not started | Begin only after P3-01 bootstrap is reproducible and accepted |
 
 **Exit:** The application runs locally, key shell workflows function, data persists, and tests pass. Provider orchestration and repository mutation remain later-phase work.
 
