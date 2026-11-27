@@ -169,3 +169,40 @@ All journeys must define:
 - Approval details are understandable before the operator decides.
 - The agent's actual operations are discoverable from the journey.
 - The UI does not claim a feature is connected/running when it is not.
+
+
+## 13. Journey K — Design a new website/application with SDC Studio
+
+**Goal:** Ask the SDC Studio design workflow to create an editable design and reviewable prototype before implementation.
+
+1. Operator opens a project and selects Design mode or the Design workspace.
+2. Operator provides a brief: product purpose, target users, platforms, primary tasks, required features and constraints.
+3. Operator attaches brand assets, screenshots, sketches, documents or reference links.
+4. The Design Agent summarizes the brief, identifies missing assumptions and creates design acceptance criteria.
+5. UX Architect produces information architecture, screen inventory and user journeys.
+6. Operator reviews the structure before high-fidelity design proceeds when the task is substantial.
+7. Visual Designer creates low-fidelity wireframes.
+8. Design Systems Specialist proposes typography, color/theme, spacing, components, variants and tokens.
+9. Visual Designer creates high-fidelity editable screens and responsive states.
+10. Prototype Specialist links screens into primary user journeys.
+11. Design Critic checks requirement coverage, visual consistency, responsive behavior and accessibility.
+12. The operator reviews the prototype, requests revisions and approves the design version.
+13. SDC Studio prepares a handoff package for the later Development workflow.
+14. The design artifact is saved to the project with its version, decisions, screens, tokens, reviews and approval state.
+
+**Success state:** The project contains an approved, traceable, editable design package and a prototype. No production code is generated merely because the design has been approved.
+
+**Fallback states:** If Figma/Penpot is unavailable, use the native design artifact model and preview. If vision-capable model access is unavailable, disclose that visual critique is limited. If required brand/reference input is missing, record the assumption instead of inventing brand rules.
+
+## 14. Journey L — Revise an existing design
+
+1. Operator selects an existing design version or connects a supported design file.
+2. Agent reads available frames, components, variables and metadata under granted permissions.
+3. Agent summarizes the current design and identifies the requested scope.
+4. Agent proposes a focused change plan.
+5. Agent updates only the affected screens/components/tokens.
+6. Visual and responsive checks rerun for affected surfaces.
+7. A new design version is recorded; the previously accepted version remains available.
+8. Operator reviews and accepts/rejects the revision.
+
+**Success state:** Design revision is traceable, prior accepted version remains recoverable, and the change report identifies exactly what changed.
