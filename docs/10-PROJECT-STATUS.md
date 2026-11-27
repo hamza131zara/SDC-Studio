@@ -17,7 +17,7 @@ This is the source of truth for project progress. Update it after meaningful cha
 **UI/UX design:** Draft artifacts prepared; clickable prototype and owner review pending  
 **Deployment:** Not started
 
-The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 design artifacts are being prepared on the active design branch. It does not yet contain a working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter.
+The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 design specifications are drafted on the active branch; the clickable prototype and owner acceptance remain pending. It does not yet contain a working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter.
 
 ## 2. Verified GitHub state
 
@@ -35,6 +35,11 @@ The repository contains the approved Phase 0 foundation and frozen Phase 1 docum
 | Phase 1 merge commit | b3ebadd4065400b4155c15469b016520a692d987 |
 | Phase 1 merge date | 2026-11-27 |
 | Phase 1 merge state | Merged and frozen |
+| Phase 2 branch | phase-2/ui-ux-design |
+| Phase 2 PR | #3 — open, draft, not merged |
+| Phase 2 PR base | main |
+| Phase 2 changed files | 11 at latest PR check |
+| Phase 2 PR head | e86803ffa9c7cbbf96fbf16c13a39f457f96c132 at PR creation; recheck live SHA before later writes |
 
 The Phase 0 merge SHA is immutable historical evidence. Phase 1 branch head, ahead/behind counts, changed-file count, checks, and mergeability are changing GitHub state; retrieve them from GitHub before the next operation.
 
@@ -181,6 +186,7 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Owner approved Phase 1 Detailed Documentation | Explicit approval in project conversation |
 | 2026-11-27 | Phase 1 PR #2 merged and documentation baseline frozen | Merge commit b3ebadd4065400b4155c15469b016520a692d987 |
 | 2026-11-27 | Phase 2 UI/UX Design branch created | phase-2/ui-ux-design |
+| 2026-11-27 | Phase 2 design PR #3 opened as draft | Design specifications only; P2-09 clickable prototype remains pending |
 | 2026-11-27 | Phase 2 information architecture, journeys, screen wireframes, design system and responsive interaction specs drafted | design/01 through design/06 |
 | 2026-11-27 | Clickable prototype remains pending | P2-09 |
 
