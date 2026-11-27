@@ -378,3 +378,59 @@ The screen set is structurally complete when:
 - Approval screens show target, impact, and exact action.
 - No screen claims a connection, test, preview, or deployment exists without evidence.
 - Responsive equivalents are defined in the interaction specification.
+
+
+## 17. Screen O — Design Workspace
+
+    ┌────────────────────────────────────────────────────────────────────┐
+    │ Project A / Design             Version: Draft v3     [Review] [Save]│
+    ├────────────────────┬───────────────────────────────┬───────────────┤
+    │ DESIGN STAGES      │ CANVAS / SCREEN                │ DESIGN BRIEF  │
+    │                    │                                │               │
+    │ Brief              │  [Desktop] [Tablet] [Mobile]   │ Product       │
+    │ UX Structure       │                                │ Target users  │
+    │ Wireframes         │     Selected editable screen   │ Constraints   │
+    │ Visual System      │                                │ Requirements  │
+    │ Screens            │                                │               │
+    │ Prototype          │                                │ Tokens        │
+    │ Review             │                                │ Components    │
+    │ Handoff            │                                │ Findings      │
+    │                    │                                │               │
+    ├────────────────────┴───────────────────────────────┴───────────────┤
+    │ [Ask Designer] [Compare versions] [Preview prototype] [Export]     │
+    └────────────────────────────────────────────────────────────────────┘
+
+Required elements:
+- Visible design stages and per-stage status.
+- Editable screen/frame canvas or rendered native design preview.
+- Screen and viewport selection.
+- Brief, requirement and reference panel.
+- Component/token inspector.
+- Agent activity and design review findings.
+- Version history and comparison.
+- Prototype preview and handoff controls.
+- External tool connection state (Figma/Penpot) without blocking native design work.
+
+States:
+- No design brief yet.
+- Brief ready for review.
+- UX structure in progress.
+- Wireframe draft.
+- Visual system draft.
+- Screens generating.
+- Prototype ready.
+- Review findings present.
+- Awaiting owner approval.
+- Approved design.
+- External design tool unavailable/permission denied.
+- Design revision in progress.
+
+The screen must distinguish design preview from a running application preview. A design screen cannot claim to be tested code.
+
+## 18. Screen acceptance extension
+
+- Design Workspace stages are visible and understandable.
+- The operator can inspect/edit the brief and generated design artifacts.
+- Prototype status is distinguishable from a live running application.
+- Design versions and approval state are visible.
+- Figma/Penpot connectivity is optional; the native design experience remains usable.
