@@ -5,9 +5,10 @@ Private AI-powered software engineering platform for agency workflows. Multi-age
 ## Project status
 
 - Phase 0 — Foundation: **accepted and merged**
-- Current phase: **Phase 1 — Documentation**
-- Phase 1: **expanded documentation draft under owner review**
-- Working branch: phase-1/documentation
+- Phase 1 — Documentation: **approved, merged and frozen** (PR #2)
+- Current phase: **Phase 2 — UI/UX Design**
+- Phase 2 status: **in progress**
+- Working branch: phase-2/ui-ux-design
 - Default branch: main
 - Application implementation: not started
 - UI/UX design: not started
@@ -28,7 +29,7 @@ Start at the [Documentation Index](./docs/README.md). It links the complete prod
 
 ## Phase policy
 
-Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Phase 1 is documentation only: no UI/UX design or application implementation begins until this documentation set is approved and merged.
+Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Phase 1 documentation is approved and frozen. Phase 2 is design-only: do not begin application implementation until the owner approves the design deliverables.
 
 ## Repository safety
 
