@@ -15,14 +15,18 @@ Phase 2 is accepted when:
 - [ ] Ask, Guided, and Auto autonomy settings are separate from mode and model selectors.
 - [ ] Core user journeys include success, empty, loading, error, blocked, and approval states.
 - [ ] Main application shell layout is specified for desktop, tablet, and mobile.
+- [ ] A dedicated Design workspace is specified for brief, UX structure, wireframes, visual system, screens, prototype, review and handoff.
 - [ ] Chat experience includes composer, attachments, streaming, task plan, activity, stop/error states, and context.
 - [ ] Project workspace includes Chat, Files, Changes, Preview, Terminal, QA, Activity, and Reports surfaces.
 - [ ] Execution transparency exposes tool activity and operation outcomes without exposing private model reasoning or secrets.
 - [ ] Approval interaction shows exact target, action, impact, and reversibility.
 - [ ] Design system defines typography, spacing, semantic color tokens, surfaces, icons, component inventory, and states.
-- [ ] Light/dark theme proposal and brand-token assumptions are reviewed by the owner.
+- [x] Owner preference recorded: both Light and Dark themes, remember the last manual selection; use OS preference before the first manual choice.
+- [x] Owner preference recorded: Comfortable density by default, Compact as an optional setting.
+- [ ] Brand accent/logo direction is reviewed by the owner.
 - [ ] Responsive behavior and accessibility requirements are documented.
 - [ ] Clickable interaction prototype or an equivalent owner-approved interactive design handoff covers the primary journeys.
+- [ ] AI design workflow and external-tool integration architecture are documented, including native design artifacts, Figma/Penpot adapters, vision critique, versioning and handoff.
 - [ ] All design deliverables are linked from the design index.
 - [ ] Owner approves the Phase 2 design package.
 
@@ -122,7 +126,17 @@ Phase 2 does not include:
 
 These are Phase 3 onward work items.
 
-## 9. Phase approval record
+## 9. Design-agent architecture acceptance
+
+- [ ] Design workflow is staged from brief to UX structure, wireframe, visual system, editable screens, prototype, critique, owner approval and handoff.
+- [ ] Design outputs are editable semantic artifacts; a full-screen screenshot is not accepted as the source design.
+- [ ] Figma/Penpot are optional adapters, not mandatory dependencies.
+- [ ] A native SDC design representation/preview is defined as the fallback when external authoring is unavailable.
+- [ ] Provider/model visual capability is detected; vision critique is never falsely claimed for text-only models.
+- [ ] Design quality findings reference specific screens/components and evidence.
+- [ ] Approved design version and handoff are traceable to product requirements.
+
+## 10. Phase approval record
 
 After owner review, record:
 - Approved design version.
