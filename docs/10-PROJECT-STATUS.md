@@ -124,7 +124,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | P2-04 — Chat experience | Draft prepared | design/03-SCREEN-WIREFRAMES.md; design/05-INTERACTION-RESPONSIVE-SPEC.md |
 | P2-05 — Project workspace | Draft prepared | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
 | P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
-| P2-07 — Settings and integrations | Draft prepared | Integrations and Settings screens specified |
+| P2-07 — Settings and integrations | Expanded design requirement recorded | Project Settings → Integrations & APIs for multi-tool setup, protected credentials, connection tests/status, scopes and usage visibility; wireframe/prototype updates pending verification |
 | P2-08 — Design system | Owner preferences confirmed; visual proposal pending review | Both themes with OS-first/manual persistence; Comfortable default, Compact optional; brand accent and workspace navigation remain open |
 | P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; preferred free-first canvas is Penpot after its MCP is connected; Product Design requires Work mode |
 | P2-10 — Design review and acceptance | **Pending prototype review** | Review editable screens, prototype, final SDC branding and workspace navigation; theme/density decisions are confirmed |
@@ -142,7 +142,8 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 - MagicPath is installed/connected but the current account reports zero credits and no free plan, so it is not a viable free-first dependency now.
 - Canva is installed for supporting visual assets/brand collateral, not as the canonical complex UI design source.
 - tldraw has been suggested for connection as an architecture/flow diagram tool; it is not connected until the owner accepts the connection.
-- No application code or functional integrations are part of Phase 2.
+- Project Settings → Integrations & APIs is the required project-level management location for configuring multiple tools, API credentials/authentication, connection checks and status.
+- Phase 2 only designs/simulates this management flow; no real API keys are collected, no third-party APIs are called and no functional integration is implemented.
 
 ## 8. Current next action
 
