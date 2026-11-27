@@ -147,7 +147,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 
 ## 8. Current next action
 
-**Immediate next action:** Produce the editable clickable prototype from design/08-PROTOTYPE-DESIGN-BRIEF.md using Penpot MCP in a supported MCP client, or Product Design in ChatGPT Work mode. The current standard Chat and Figma View seat cannot author the required editable Figma Design canvas. After producing the prototype, run the flow/visual audit, update the design package and request owner approval. Theme and density preferences are confirmed; no further choice is needed on those items. Do not start Phase 3 application implementation until the owner approves the complete design package.
+**Immediate next action:** Produce the editable clickable prototype from design/08-PROTOTYPE-DESIGN-BRIEF.md using Penpot MCP in a supported MCP client, or Product Design in ChatGPT Work mode. The prototype must include Project Settings → Integrations & APIs: select a platform, configure a mock credential/auth method, test/check status where supported, demonstrate the separate sample API request action and show later tool-call activity. The current standard Chat and Figma View seat cannot author the required editable Figma Design canvas. After producing the prototype, run the flow/visual audit, update the design package and request owner approval. Theme and density preferences are confirmed. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
 Do not:
 - Start Phase 3 application implementation before Phase 2 design approval.
