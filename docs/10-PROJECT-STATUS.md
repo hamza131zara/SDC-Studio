@@ -14,10 +14,10 @@ This is the source of truth for project progress. Update it after meaningful cha
 **Phase 0:** Accepted and merged  
 **Phase 1:** Accepted, merged, and frozen  
 **Application implementation:** Not started  
-**UI/UX design:** Design specifications and agent-design architecture prepared; clickable prototype and owner review pending  
+**UI/UX design:** Design specifications and design-agent architecture prepared; clickable prototype and owner review pending  
 **Deployment:** Not started
 
-The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 design specifications are drafted on the active branch; the clickable prototype and owner acceptance remain pending. It does not yet contain a working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter.
+The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 specifications are drafted on the active branch; the clickable prototype and owner acceptance remain pending. The design-tool access assessment is recorded in design/07-DESIGN-AGENT-ARCHITECTURE.md. No working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter exists yet.
 
 ## 2. Verified GitHub state
 
@@ -114,7 +114,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 ## 7. Phase 2 — UI/UX Design progress
 
 **Current branch:** phase-2/ui-ux-design  
-**Status:** Design specifications and design-agent architecture drafted; interaction prototype and owner acceptance remain pending.
+**Status:** Design specifications and design-agent architecture drafted; interaction prototype and owner acceptance remain pending. Current tool access has been assessed and documented.
 
 | Work item | Status | Evidence / pending action |
 |---|---|---|
@@ -126,9 +126,9 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
 | P2-07 — Settings and integrations | Draft prepared | Integrations and Settings screens specified |
 | P2-08 — Design system | Draft prepared | Both themes; remember last manual selection; Comfortable default, Compact optional; brand accent remains provisional |
-| P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; use connected Product Design app to explore, audit and prototype |
+| P2-09 — Interaction prototype | **Brief ready; prototype pending** | design/08-PROTOTYPE-DESIGN-BRIEF.md; preferred free-first canvas is Penpot after its MCP is connected; Product Design requires Work mode |
 | P2-10 — Design review and acceptance | **Pending owner review** | Owner reviews design package and approves or requests corrections |
-| P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; connected Product Design app workflow documented |
+| P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; adapter strategy and live account-access constraints documented |
 
 ### Current design decisions and assumptions
 
@@ -136,8 +136,12 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 - Both Light and Dark themes are available; first visit follows OS preference, then the app remembers the last manual selection.
 - Comfortable density is the default; Compact is optional.
 - Final SDC logo/accent remains provisional.
-- Figma and Canva connectors are available in ChatGPT; current Figma account access is View/Starter, so canvas writing is not assumed available. Penpot is the free/open-source alternative to evaluate.
-- Product Design is connected in ChatGPT and can assist with brief refinement, design directions, flow audits and prototyping. It is not an SDC Studio runtime dependency. MagicPath remains an optional alternative, not required for current work.
+- Figma is installed/connected, but the authenticated account has View seats on two Starter teams; Figma Design canvas writing is not available under this access. Figma Make in Drafts may be tested only if enabled for the account and is not a shareable handoff for a View seat.
+- Penpot is the preferred free-first editable canvas to evaluate. Its official cloud tier is advertised as free and its official MCP can edit native design objects, but Penpot MCP is not connected to this ChatGPT session yet.
+- Product Design is installed in ChatGPT; its full ideation/prototype workflow requires ChatGPT Work mode, not this standard Chat mode. It is an assisted workflow, not an SDC Studio runtime dependency.
+- MagicPath is installed/connected but the current account reports zero credits and no free plan, so it is not a viable free-first dependency now.
+- Canva is installed for supporting visual assets/brand collateral, not as the canonical complex UI design source.
+- tldraw has been suggested for connection as an architecture/flow diagram tool; it is not connected until the owner accepts the connection.
 - No application code or functional integrations are part of Phase 2.
 
 ## 8. Current next action
@@ -192,6 +196,9 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Phase 2 design PR #3 opened as draft | Design specifications only; P2-09 clickable prototype remains pending |
 | 2026-11-27 | Phase 2 information architecture, journeys, screen wireframes, design system and responsive interaction specs drafted | design/01 through design/06 |
 | 2026-11-27 | Clickable prototype remains pending | P2-09 |
+| 2026-11-27 | Figma account access assessed: View seats on Starter teams; Design canvas write unavailable under current seat | design/07-DESIGN-AGENT-ARCHITECTURE.md |
+| 2026-11-27 | Penpot selected as preferred free-first editable design canvas to evaluate; MCP not connected yet | design/07-DESIGN-AGENT-ARCHITECTURE.md |
+| 2026-11-27 | Product Design full workflow identified as Work-mode only; MagicPath has zero credits; tldraw suggested but not connected | design/07-DESIGN-AGENT-ARCHITECTURE.md |
 | 2026-11-27 | Owner selected both themes with last manual choice remembered and Comfortable density by default | design/04-DESIGN-SYSTEM.md |
 | 2026-11-27 | AI design workflow and Figma/Penpot integration architecture drafted | design/07-DESIGN-AGENT-ARCHITECTURE.md |
 | 2026-11-27 | SDC Studio prototype design brief prepared for Product Design app | design/08-PROTOTYPE-DESIGN-BRIEF.md |
