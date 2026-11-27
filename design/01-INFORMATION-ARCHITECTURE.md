@@ -133,10 +133,11 @@ Every project has:
 - Current workspace revision.
 - Artifacts and reports.
 
-A project workspace has a consistent top-level project header and tabbed or segmented work surfaces.
+A project workspace has a consistent top-level project header and tabbed or segmented work surfaces. The Design surface is used to create/review design briefs, flows, wireframes, screens, tokens, components and prototypes; it is distinct from Preview, which shows a running implementation.
 
 ### Recommended project workspace navigation
 
+- **Design:** Design brief, IA, user journeys, wireframes, screens, tokens, components and prototype review.
 - **Chat:** Primary task conversation and agent interaction.
 - **Files:** Repository tree and file viewer.
 - **Changes:** Diff, changed files, commits, and PR references.
@@ -198,7 +199,11 @@ Mobile:
 - Code/preview/terminal use dedicated full-screen tabs rather than compressed columns.
 - Approval requests remain fully readable and actionable.
 
-## 10. Information architecture acceptance
+## 10. Design workspace entry point
+
+The Design surface must make the stages of design visible: Brief, UX Structure, Wireframes, Visual System, Screens, Prototype, Review and Handoff. It must show which artifacts are drafts, which are approved, and which require owner input. It should support native SDC design artifacts and optional Figma/Penpot connections without requiring an external design account.
+
+## 11. Information architecture acceptance
 
 - The route/page hierarchy is clear and non-duplicative.
 - New Chat and New Project are discoverable.
