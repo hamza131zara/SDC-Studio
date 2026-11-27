@@ -131,8 +131,9 @@ The final SDC brand accent/logo is not yet approved. Use a neutral placeholder t
 - Compact is an optional preference for information-dense work surfaces.
 - Comfortable: more spacing in chat, reports, activity, settings and file rows.
 - Compact: tighter row/section spacing to show more files, terminal output, activity and test records.
+- Use one global density preference; do not add independent per-panel density settings in the prototype.
 - Compact must not shrink text below accessible sizes or remove labels/status information.
-- If useful, show a compact variant of a file/activity panel, but do not duplicate every screen just to show density.
+- Show the Comfortable default plus one useful Compact example (such as a file or activity panel), without duplicating every screen.
 
 ## 7. Layout and responsive behavior
 
