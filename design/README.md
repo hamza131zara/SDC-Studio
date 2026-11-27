@@ -63,9 +63,20 @@ Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canoni
 
 These assumptions do not change the approved product scope. Owner feedback may adjust visual styling and layout within the existing product requirements.
 
+## Design-tool access and recommendation
+
+- **Preferred free-first editable design canvas:** Penpot, after connecting its official MCP in a supported MCP client. The cloud tier is advertised as free; exact limits must be verified during setup.
+- **Figma:** currently connected, but the available teams report View seats on Starter plans; do not expect Figma Design canvas writes without Full-seat access.
+- **Product Design:** use in ChatGPT Work mode for visual ideation, flow audits and prototype workflows; not a normal Chat-mode workflow or SDC Studio runtime dependency.
+- **MagicPath:** connected but the account currently reports zero credits and no free plan; optional only if access changes.
+- **tldraw:** suggested for system/agent diagrams; user connection is still pending.
+- **Canva:** supporting graphics and brand collateral, not primary app UI source of truth.
+
+Full tool-access notes and references are in [07-DESIGN-AGENT-ARCHITECTURE.md](./07-DESIGN-AGENT-ARCHITECTURE.md).
+
 ## Remaining Phase 2 work
 
-- Create the clickable prototype covering the primary journeys listed in the interaction specification.
+- Connect Penpot MCP in a supported MCP client (or use Product Design in ChatGPT Work mode) and create the clickable prototype covering the primary journeys listed in the interaction specification.
 - Review the provisional visual direction and brand accent with the owner.
 - Validate the complete design package against the acceptance checklist.
 - Record approved/deferred decisions and obtain owner acceptance.
