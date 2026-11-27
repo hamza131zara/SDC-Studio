@@ -4,20 +4,20 @@
 **Timezone for human-readable dates:** Asia/Karachi  
 **Repository:** hamza131zara/SDC-Studio  
 **Default branch:** main  
-**Current working branch:** phase-2/ui-ux-design
+**Current working branch:** phase-3/application-shell
 
 This is the source of truth for project progress. Update it after meaningful changes to phase, branch, pull request, acceptance, blockers, or next action. Verify changing GitHub details live before acting.
 
 ## 1. Current overall status
 
-**Current phase:** Phase 2 — UI/UX Design  
+**Current phase:** Phase 3 — Application Shell  
 **Phase 0:** Accepted and merged  
 **Phase 1:** Accepted, merged, and frozen  
-**Application implementation:** Not started  
-**UI/UX design:** Design specifications and design-agent architecture prepared; clickable prototype and owner review pending  
+**Phase 2:** Written design package accepted and merged; P2-09 clickable prototype waived and deferred  
+**Application implementation:** P3-01 repository/app bootstrap in progress  
 **Deployment:** Not started
 
-The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 specifications are drafted on the active branch; the clickable prototype and owner acceptance remain pending. The design-tool access assessment is recorded in design/07-DESIGN-AGENT-ARCHITECTURE.md. No working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter exists yet.
+The repository contains the approved Phase 0 foundation, frozen Phase 1 documentation, and the Phase 2 written design package merged to main. The owner accepted the written package on 2026-11-27 and waived the P2-09 clickable prototype as a phase gate; that prototype was not created and remains deferred. Phase 3 is authorized. P3-01 bootstrap work is in progress; no working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter exists yet.
 
 ## 2. Verified GitHub state
 
@@ -36,10 +36,13 @@ The repository contains the approved Phase 0 foundation and frozen Phase 1 docum
 | Phase 1 merge date | 2026-11-27 |
 | Phase 1 merge state | Merged and frozen |
 | Phase 2 branch | phase-2/ui-ux-design |
-| Phase 2 PR | #3 — open, draft, not merged |
+| Phase 2 PR | #3 — closed and merged |
 | Phase 2 PR base | main |
-| Phase 2 changed files | Recheck live PR #3 changed-file count |
-| Phase 2 PR head | Dynamic; verify current branch/PR head from GitHub before subsequent writes |
+| Phase 2 changed files | 13 |
+| Phase 2 merge commit | 07f9e0313bebb5ad604c9fd51f031a303edfc647 |
+| Phase 2 merge date | 2026-11-27 |
+| Phase 2 merge state | Written design package accepted; P2-09 clickable prototype waived and deferred |
+| Phase 3 branch | phase-3/application-shell |
 
 The Phase 0 merge SHA is immutable historical evidence. Phase 1 branch head, ahead/behind counts, changed-file count, checks, and mergeability are changing GitHub state; retrieve them from GitHub before the next operation.
 
@@ -49,8 +52,8 @@ The Phase 0 merge SHA is immutable historical evidence. Phase 1 branch head, ahe
 |---|---|---|---|
 | 0 — Foundation | **Accepted / merged** | PR #1 merged; foundation exists on main | Reopen only for approved material change |
 | 1 — Documentation | **Accepted / merged** | PR #2 merged; 16 detailed documents and index frozen on main | Reopen only for approved material change |
-| 2 — UI/UX Design | **In progress** | Branch phase-2/ui-ux-design created after Phase 1 merge | Owner reviews design deliverables before Phase 3 |
-| 3 — Application Shell | Not started | No application code | Start only after Phase 2 approval |
+| 2 — UI/UX Design | **Accepted / merged with exception** | PR #3 merged; owner accepted written design package and waived P2-09 clickable prototype | Prototype remains deferred; no false completion claim |
+| 3 — Application Shell | **In progress** | Branch phase-3/application-shell created from merged main; P3-01 bootstrap underway | Complete reproducible monorepo/tooling bootstrap |
 | 4 — AI Gateway and Orchestration | Not started | No provider integration | Start only after Phase 3 exit |
 | 5 — GitHub and Project Workspaces | Not started | Product's own GitHub App not implemented | Start after Phase 4 tool/policy contract |
 | 6 — Development and Execution | Not started | No project runner or sandbox | Start after Phase 5 |
@@ -111,10 +114,11 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | Owner review | **Accepted** | Owner approved Phase 1 on 2026-11-27 |
 | PR #2 merge | **Done** | Squash merge commit b3ebadd4065400b4155c15469b016520a692d987 |
 
-## 7. Phase 2 — UI/UX Design progress
+## 7. Phase 2 — UI/UX Design completion record
 
-**Current branch:** phase-2/ui-ux-design  
-**Status:** Design specifications and design-agent architecture drafted; interaction prototype and owner acceptance remain pending. Current tool access has been assessed and documented.
+**Branch:** phase-2/ui-ux-design  
+**PR:** #3 — merged to main on 2026-11-27 (merge commit 07f9e0313bebb5ad604c9fd51f031a303edfc647).  
+**Status:** Written design package accepted by owner. P2-09 clickable prototype explicitly waived as a Phase 2 exit requirement; no interactive prototype was created.
 
 | Work item | Status | Evidence / pending action |
 |---|---|---|
@@ -145,17 +149,19 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 - Project Settings → Integrations & APIs is the required project-level management location for configuring multiple tools, API credentials/authentication, connection checks and status.
 - Phase 2 only designs/simulates this management flow; no real API keys are collected, no third-party APIs are called and no functional integration is implemented.
 
-## 8. Current next action
+## 8. Phase 3 — Application Shell progress
 
-**Immediate next action:** Produce the editable clickable prototype from design/08-PROTOTYPE-DESIGN-BRIEF.md using Penpot MCP in a supported MCP client, or Product Design in ChatGPT Work mode. The prototype must include Project Settings → Integrations & APIs: select a platform, configure a mock credential/auth method, test/check status where supported, demonstrate the separate sample API request action and show later tool-call activity. The current standard Chat and Figma View seat cannot author the required editable Figma Design canvas. After producing the prototype, run the flow/visual audit, update the design package and request owner approval. Theme and density preferences are confirmed. Do not start Phase 3 application implementation until the owner approves the complete design package.
+**Current branch:** phase-3/application-shell  
+**Status:** P3-01 repository/app bootstrap in progress.
 
-Do not:
-- Start Phase 3 application implementation before Phase 2 design approval.
-- Create application source code or scaffolding during Phase 2.
-- Integrate AI providers.
-- Register/configure the product's GitHub App.
-- Implement the runner, browser preview, QA engine, or deployment adapters.
-- Expand Phase 2 beyond design deliverables without owner approval.
+| Work item | Status | Evidence / next action |
+|---|---|---|
+| P3-01 — Repository/app bootstrap | **In progress** | Add pnpm workspace, pinned toolchain, strict TypeScript baseline, ESLint/Prettier configuration and CI; generate the lockfile and validate install/checks locally |
+| P3-02 to P3-11 | Not started | Start after P3-01 is reproducible and accepted |
+
+**Immediate next action:** Finish P3-01, create and commit pnpm-lock.yaml using the pinned pnpm version, then run install, lint and formatting checks. Do not start P3-02 application UI until the bootstrap passes review.
+
+Phase 2 is closed. Phase 3 may implement the approved application shell only. Later phases still own AI provider orchestration, the product GitHub App, isolated execution runner, browser preview/QA engine, and deployment adapters; do not pull those modules into P3-01.
 
 ## 9. Documentation completeness boundary
 
@@ -205,6 +211,8 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | SDC Studio prototype design brief prepared for Product Design app | design/08-PROTOTYPE-DESIGN-BRIEF.md |
 | 2026-11-27 | Product Design app connection confirmed by owner | Use for brief refinement, flow audit and interactive prototype assistance; not an SDC Studio runtime integration |
 | 2026-11-27 | Owner clarified that multiple external tools/APIs must be configured per project, with protected credentials, test/status checks and auditable calls | Project Settings → Integrations & APIs; design/01 through design/08 |
+| 2026-11-27 | Owner accepted Phase 2 written design package and waived P2-09 clickable prototype as a phase gate | PR #3 merge commit 07f9e0313bebb5ad604c9fd51f031a303edfc647; prototype remains deferred |
+| 2026-11-27 | Phase 3 branch created from merged main; P3-01 started | phase-3/application-shell |
 
 
 ## 12. Status maintenance procedure
