@@ -19,7 +19,7 @@ See [Phase 0 Foundation](./PHASE-0-FOUNDATION.md) for product scope, the 10/10 l
 
 ## Current design work
 
-See the [Phase 2 UI/UX Design Package](./design/README.md) for information architecture, user journeys, wireframes, visual design system, interactions, responsive behavior and design acceptance.
+Phase 2 design draft: [PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3). See the [Phase 2 UI/UX Design Package](./design/README.md) for information architecture, user journeys, wireframes, visual design system, interactions, responsive behavior and design acceptance. The clickable prototype and owner approval remain pending.
 
 ## Project documentation
 
