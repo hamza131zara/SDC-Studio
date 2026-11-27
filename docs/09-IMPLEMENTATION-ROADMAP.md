@@ -182,7 +182,7 @@ The statuses above are a record of the repository state at the date shown in PRO
 
 | ID | Status | Evidence / next action |
 |---|---|---|
-| P3-01 | **In progress** | Establish pnpm monorepo, pinned toolchain, strict TypeScript baseline, lint/format configuration and CI workflow; generate and commit the lockfile, then verify on the local development environment |
+| P3-01 | **In progress — configuration drafted; validation pending** | Root pnpm workspace and pinned toolchain, strict TypeScript base, lint/format configuration and initial CI workflow added. Generate/commit pnpm-lock.yaml, harden CI to frozen install and verify locally |
 | P3-02 to P3-11 | Not started | Begin only after P3-01 bootstrap is reproducible and accepted |
 
 **Exit:** The application runs locally, key shell workflows function, data persists, and tests pass. Provider orchestration and repository mutation remain later-phase work.
