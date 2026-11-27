@@ -33,10 +33,11 @@ The left sidebar is persistent on desktop and collapsible on narrower screens.
 - Search/filter across conversations and projects.
 
 **Bottom region**
-- Integrations (GitHub and configured providers).
-- Settings.
+- Global Settings (appearance, account and application-wide defaults).
 - Help/About.
 - Operator account/session indicator.
+
+Integration credentials and active tool connections are managed inside each project's own Settings so the operator can see and control exactly which tools are available to that project.
 
 The sidebar must not become a second project file explorer. Repository files belong in the project workspace.
 
@@ -83,22 +84,30 @@ The panel is optional/collapsible; the chat remains readable.
     │       ├── Project summary
     │       ├── Repository connection
     │       ├── Conversations/tasks
-    │       └── Project workspace
-    │           ├── Chat
-    │           ├── Files and changes
-    │           ├── Preview
-    │           ├── Terminal
-    │           ├── Tests and QA
-    │           ├── Activity
-    │           └── Reports
-    ├── Integrations
-    │   ├── GitHub
-    │   └── AI Providers / Local Models
-    └── Settings
-        ├── General
-        ├── Models and provider preferences
-        ├── Execution and permissions
-        ├── Project defaults
+    │       ├── Project workspace
+    │       │   ├── Design
+    │       │   ├── Chat
+    │       │   ├── Files and changes
+    │       │   ├── Preview
+    │       │   ├── Terminal
+    │       │   ├── Tests and QA
+    │       │   ├── Activity
+    │       │   └── Reports
+    │       └── Project Settings
+    │           ├── General
+    │           ├── Integrations & APIs
+    │           │   ├── AI / Model Providers
+    │           │   ├── Development and Design Tools
+    │           │   ├── Source Control / GitHub
+    │           │   ├── Testing and Browser Tools
+    │           │   ├── Hosting and Deployment
+    │           │   └── Research / Other Tools
+    │           ├── Models and AI Defaults
+    │           ├── Repository and Access
+    │           └── Execution and Permissions
+    └── Global Settings
+        ├── Account and Session
+        ├── Application Defaults
         └── Appearance
 
 The hierarchy describes navigation destinations, not a requirement to build every page in Phase 3 simultaneously. Phase implementation follows the approved roadmap.
@@ -132,6 +141,10 @@ Every project has:
 - Task history and status.
 - Current workspace revision.
 - Artifacts and reports.
+- Project-scoped integration connections, selected tool capabilities, and protected credential references.
+- Project-level configuration and permission overrides within the platform's security policy.
+
+**Project Settings entry:** A Settings action is available from the active project's header/menu. Its Integrations & APIs section is the primary place to add, configure, test, enable, disable, replace or remove external platform/tool connections for that project. Global Settings do not replace project-specific integration management.
 
 A project workspace has a consistent top-level project header and tabbed or segmented work surfaces. The Design surface is used to create/review design briefs, flows, wireframes, screens, tokens, components and prototypes; it is distinct from Preview, which shows a running implementation.
 
@@ -148,6 +161,8 @@ A project workspace has a consistent top-level project header and tabbed or segm
 - **Reports:** Final task reports and downloadable artifacts.
 
 The tabs should be permission/state-aware. For example, Preview can show a helpful empty state until an app is running; it must not imply that a preview exists.
+
+The project header exposes Project Settings without mixing configuration controls into the primary workspace tabs. A compact project header summary may indicate how many integrations are connected and whether any need attention; the detailed management stays in Project Settings → Integrations & APIs.
 
 ## 6. Project context visibility
 
@@ -174,7 +189,8 @@ Avoid showing raw tokens, private key details, environment variable values, or f
 - No projects: explain Create Project and Connect Repository.
 - No conversations: show the composer and recent project entry points.
 - No GitHub installation: explain how to connect GitHub and select repositories.
-- No AI providers: explain that a model provider/local model must be configured before agent execution.
+- No AI providers: explain that a model provider/local model must be configured in Project Settings → Integrations & APIs before model-backed agent execution.
+- No tool connections: explain how to add a supported platform/tool in the current project's Integrations & APIs settings. Do not ask the operator to paste keys into chat.
 - No running preview: explain how to start a development server through the task workflow.
 - No test runs: show the test entry point and state that no QA has run yet.
 - No reports: show that reports are generated after tasks execute.
