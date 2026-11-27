@@ -11,6 +11,12 @@ Phase 2 is accepted when:
 - [ ] Information architecture and page hierarchy are approved.
 - [ ] New chat and new project flows are specified.
 - [ ] Existing GitHub repository connection flow is specified, including selected repository scope and read-only discovery state.
+- [ ] Project Settings contains a dedicated Integrations & APIs management area for multiple supported platforms/tools.
+- [ ] Integration catalog is searchable/category-based and exposes adapter-supported authentication methods, operations, required scopes and data handling.
+- [ ] Project integrations support protected credential setup, project binding, safe Test Connection/Check Status where supported, and truthful unsupported/untested states.
+- [ ] Potentially billable sample API/model requests are separate from safe connection checks and require explicit operator initiation.
+- [ ] Project integration cards expose actual status, last-check evidence, available usage/quota information where reported, and recovery actions.
+- [ ] Agent tool calls are limited to configured/enabled project integrations and their permitted adapter operations; activity is auditable with secrets redacted.
 - [ ] All eight operating modes are represented in the interface.
 - [ ] Ask, Guided, and Auto autonomy settings are separate from mode and model selectors.
 - [ ] Core user journeys include success, empty, loading, error, blocked, and approval states.
@@ -29,6 +35,7 @@ Phase 2 is accepted when:
 - [ ] Responsive behavior and accessibility requirements are documented.
 - [ ] Clickable interaction prototype or an equivalent owner-approved interactive design handoff covers the primary journeys.
 - [ ] AI design workflow and external-tool integration architecture are documented, including native design artifacts, Figma/Penpot adapters, vision critique, versioning and handoff.
+- [ ] Project integrations settings cover adding/selecting multiple tool platforms, protected authentication, project scope, test/status support, usage visibility and safe removal.
 - [ ] All design deliverables are linked from the design index.
 - [ ] Owner approves the Phase 2 design package.
 
@@ -46,7 +53,7 @@ Phase 2 is accepted when:
 | Terminal | Yes | D, G | Yes | Yes |
 | QA | Yes | G, H | Yes | Yes |
 | Activity | Yes | D, E | Yes | Yes |
-| Integrations | Yes | C, I | Yes | Yes |
+| Project Settings / Integrations & APIs | Yes | C, I, M | Yes | Yes |
 | Settings | Yes | I | Yes | Yes |
 | Approval | Yes | E, J | Yes | Yes |
 | Task Report | Yes | H | Yes | Yes |
