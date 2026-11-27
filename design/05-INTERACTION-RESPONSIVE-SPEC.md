@@ -173,7 +173,7 @@ Behavior:
 - A safe Test Connection uses the adapter's documented non-mutating check where available; show its actual result, timestamp and latency when returned.
 - Check Status may refresh connection/auth/quota state only for fields the provider exposes.
 - If a provider has no safe health/status endpoint, state that testing/status is unsupported. Do not report Connected solely because a key was saved.
-- If a test requires a potentially billable generation or write request, separate it as Run Sample Request, state known cost/usage implications and require an explicit operator action.
+- If a test requires a potentially billable generation or write request, separate it as Run Sample Request, state known cost/usage implications and require an explicit operator action. The action must be visible as a separate control, not hidden behind Test Connection.
 - Display quota, usage or credit balance only when the provider reports it. Otherwise show “Not reported by provider”.
 - Handle invalid credentials, missing scopes, expired OAuth, rate limits, quota exhaustion, network failure and provider outage with specific next steps.
 
