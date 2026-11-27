@@ -322,7 +322,7 @@ Do not display chain-of-thought or private model reasoning. Show concise action 
 
 **Configured project connections**
 - One card per project-bound integration: platform/tool name, category, configured/verified state, account or endpoint label, granted scopes/capabilities, last checked timestamp, and provider-reported usage/quota when available.
-- Actions: Configure, Test Connection, Check Status, Enable/Disable for this project, Replace Credential, Reauthorize, Disconnect/Remove.
+- Actions: Configure, Test Connection, Check Status, Run Sample Request (explicit and potentially billable), Enable/Disable for this project, Replace Credential, Reauthorize, Disconnect/Remove.
 - Test Connection uses a safe, non-mutating provider check where available.
 - A model/sample API request that could incur usage is a separate explicit action with a warning/confirmation.
 - If status/test is unsupported, show “Status check not supported” or “Test not supported”; never invent a green Connected state.
