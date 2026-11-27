@@ -106,18 +106,6 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | Owner review | **Accepted** | Owner approved Phase 1 on 2026-11-27 |
 | PR #2 merge | **Done** | Squash merge commit b3ebadd4065400b4155c15469b016520a692d987 |
 
-## 8. Current next action
-
-**Immediate next action:** Review the Phase 2 design draft, confirm or adjust the visual direction (dark/light default, brand accent, density), then complete the clickable prototype and design review. Do not start Phase 3 application implementation until the owner approves the complete design package.
-
-Do not:
-- Start Phase 3 application implementation before Phase 2 design approval.
-- Create application source code or scaffolding during Phase 2.
-- Integrate AI providers.
-- Register/configure the product's GitHub App.
-- Implement the runner, browser preview, QA engine, or deployment adapters.
-- Expand Phase 2 beyond design deliverables without owner approval.
-
 ## 7. Phase 2 — UI/UX Design progress
 
 **Current branch:** phase-2/ui-ux-design  
@@ -144,7 +132,19 @@ Do not:
 - Responsive tablet/mobile design is included.
 - No application code or functional integrations are part of Phase 2.
 
-## 8. Documentation completeness boundary
+## 8. Current next action
+
+**Immediate next action:** Review the Phase 2 design draft, confirm or adjust the visual direction (dark/light default, brand accent, density), then complete the clickable prototype and design review. Do not start Phase 3 application implementation until the owner approves the complete design package.
+
+Do not:
+- Start Phase 3 application implementation before Phase 2 design approval.
+- Create application source code or scaffolding during Phase 2.
+- Integrate AI providers.
+- Register/configure the product's GitHub App.
+- Implement the runner, browser preview, QA engine, or deployment adapters.
+- Expand Phase 2 beyond design deliverables without owner approval.
+
+## 9. Documentation completeness boundary
 
 Phase 1 is intended to provide a comprehensive planning and control baseline. It does not invent implementation-specific facts that are not yet known.
 
@@ -152,7 +152,7 @@ Finalize exact REST routes and API schemas when backend modules are implemented;
 
 These details are deferred intentionally and must be added to the relevant implementation documentation when verified.
 
-## 9. Risks and constraints
+## 10. Risks and constraints
 
 | Risk/constraint | Current handling | Revisit phase |
 |---|---|---|
@@ -165,7 +165,7 @@ These details are deferred intentionally and must be added to the relevant imple
 | Literal zero restrictions cannot override external provider/platform/legal controls | Target maximum practical freedom within authorized boundaries | All phases |
 | Architecture choices may need validation | Decisions marked provisional/pending until evidence exists | Relevant implementation phase |
 
-## 10. Progress history
+## 11. Progress history
 
 | Date | Event | Evidence |
 |---|---|---|
@@ -184,7 +184,7 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Phase 2 information architecture, journeys, screen wireframes, design system and responsive interaction specs drafted | design/01 through design/06 |
 | 2026-11-27 | Clickable prototype remains pending | P2-09 |
 
-## 11. Status maintenance procedure
+## 12. Status maintenance procedure
 
 Whenever progress changes:
 1. Verify actual repository branch, commit, PR, and file state.
