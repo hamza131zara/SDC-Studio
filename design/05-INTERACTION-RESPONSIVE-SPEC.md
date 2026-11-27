@@ -255,7 +255,8 @@ The clickable design prototype should demonstrate:
 9. Preview and responsive viewport selection.
 10. QA test results and screenshot gallery.
 11. Terminal state presentation.
-12. Settings/provider setup.
+12. Open Global Settings to change appearance preferences.
+13. Open Project Settings → Integrations & APIs, select a supported platform, configure a mock credential/auth method, test the connection where supported, and review status.
 13. Final task report navigation.
 
 The prototype may use static sample content. It must be labelled as prototype data and must not imply a real model call, repository operation, test, or deployment.
