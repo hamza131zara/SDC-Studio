@@ -29,8 +29,6 @@ Phase 2 is accepted when:
 - [ ] Design system defines typography, spacing, semantic color tokens, surfaces, icons, component inventory, and states.
 - [x] Theme preference is owner-confirmed: both Light and Dark; follow OS preference on first visit and remember the last manual choice.
 - [x] Density preference is owner-confirmed: Comfortable default; Compact optional; one predictable global setting without per-panel overrides.
-- [x] Owner preference confirmed: both Light and Dark themes, OS preference on first visit and remembered manual selection.
-- [x] Owner preference confirmed: Comfortable density by default, Compact as an optional global setting.
 - [ ] Brand accent/logo direction is reviewed by the owner.
 - [ ] Responsive behavior and accessibility requirements are documented.
 - [ ] Clickable interaction prototype or an equivalent owner-approved interactive design handoff covers the primary journeys.
