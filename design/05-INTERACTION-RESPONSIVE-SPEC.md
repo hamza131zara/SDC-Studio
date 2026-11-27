@@ -250,7 +250,7 @@ The prototype may use static sample content. It must be labelled as prototype da
   - A manual selection is remembered and restored on subsequent visits.
   - Density defaults to Comfortable, with Compact available.
   - Density changes spacing and information density without changing the semantic design tokens or hiding critical information.
-- Comfortable/Compact may be changed globally; workspace-specific density override can be considered only if it remains predictable and accessible.
+- Density is one global preference across the workspace: Comfortable by default, Compact optional. Phase 2 does not define per-panel overrides; each surface may still adapt spacing/layout to viewport constraints while respecting the selected density.
 - Design versions are immutable snapshots or versioned revisions.
 - Prototype preview is labelled as design/prototype, not a real deployed app.
 - An external Figma/Penpot connection displays its actual permission state and available actions.
