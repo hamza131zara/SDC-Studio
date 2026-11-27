@@ -14,10 +14,10 @@ This is the source of truth for project progress. Update it after meaningful cha
 **Phase 0:** Accepted and merged  
 **Phase 1:** Accepted, merged, and frozen  
 **Application implementation:** Not started  
-**UI/UX design:** Not started  
+**UI/UX design:** Draft artifacts prepared; clickable prototype and owner review pending  
 **Deployment:** Not started
 
-The repository contains the approved foundation and the Phase 1 documentation draft. It does not yet contain a working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter.
+The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 design artifacts are being prepared on the active design branch. It does not yet contain a working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter.
 
 ## 2. Verified GitHub state
 
@@ -108,7 +108,7 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 
 ## 7. Current next action
 
-**Immediate next action:** Execute Phase 2 UI/UX Design work items P2-01 through P2-10 on branch phase-2/ui-ux-design. Deliver information architecture, user journeys, screen layouts, responsive behavior, design system, interaction prototype specification, and design acceptance package. Do not start Phase 3 application implementation until the owner approves Phase 2.
+**Immediate next action:** Review the Phase 2 design draft, confirm or adjust the visual direction (dark/light default, brand accent, density), then complete the clickable prototype and design review. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
 Do not:
 - Start Phase 3 application implementation before Phase 2 design approval.
@@ -117,6 +117,32 @@ Do not:
 - Register/configure the product's GitHub App.
 - Implement the runner, browser preview, QA engine, or deployment adapters.
 - Expand Phase 2 beyond design deliverables without owner approval.
+
+## 7. Phase 2 — UI/UX Design progress
+
+**Current branch:** phase-2/ui-ux-design  
+**Status:** Design draft prepared; interaction prototype and owner acceptance remain pending.
+
+| Work item | Status | Evidence / pending action |
+|---|---|---|
+| P2-01 — Information architecture | Draft prepared | design/01-INFORMATION-ARCHITECTURE.md |
+| P2-02 — Core user journeys | Draft prepared | design/02-USER-JOURNEYS.md |
+| P2-03 — Main application shell | Draft prepared | design/03-SCREEN-WIREFRAMES.md |
+| P2-04 — Chat experience | Draft prepared | design/03-SCREEN-WIREFRAMES.md; design/05-INTERACTION-RESPONSIVE-SPEC.md |
+| P2-05 — Project workspace | Draft prepared | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
+| P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
+| P2-07 — Settings and integrations | Draft prepared | Integrations and Settings screens specified |
+| P2-08 — Design system | Draft prepared | design/04-DESIGN-SYSTEM.md; exact brand accent remains provisional |
+| P2-09 — Interaction prototype | **Pending** | Clickable prototype covering primary user journeys has not yet been created |
+| P2-10 — Design review and acceptance | **Pending owner review** | Owner reviews design package and approves or requests corrections |
+
+### Current design assumptions
+
+- Desktop-first developer workspace.
+- Dark neutral theme proposed as default, with light theme variant.
+- Final SDC logo/accent and density preference await owner confirmation.
+- Responsive tablet/mobile design is included.
+- No application code or functional integrations are part of Phase 2.
 
 ## 8. Documentation completeness boundary
 
@@ -155,6 +181,8 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Owner approved Phase 1 Detailed Documentation | Explicit approval in project conversation |
 | 2026-11-27 | Phase 1 PR #2 merged and documentation baseline frozen | Merge commit b3ebadd4065400b4155c15469b016520a692d987 |
 | 2026-11-27 | Phase 2 UI/UX Design branch created | phase-2/ui-ux-design |
+| 2026-11-27 | Phase 2 information architecture, journeys, screen wireframes, design system and responsive interaction specs drafted | design/01 through design/06 |
+| 2026-11-27 | Clickable prototype remains pending | P2-09 |
 
 ## 11. Status maintenance procedure
 
