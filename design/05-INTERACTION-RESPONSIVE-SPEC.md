@@ -153,14 +153,42 @@ Behavior:
 
 ## 10. Settings and integration interactions
 
-### Provider setup
-- Show configured, disabled, unavailable, rate-limited, and authentication-error states.
-- Credential input is masked.
-- After save, never reveal the full saved credential.
-- Test connection reports actual tool result and timestamp.
-- Data terms/acknowledgement is shown when required by the provider integration design.
+### Project Settings → Integrations & APIs
 
-### GitHub
+**Entry and scope**
+- The primary connection-management entry point is the active project header/menu → Project Settings → Integrations & APIs.
+- The page header must persistently show the selected project name so keys and settings cannot be accidentally attached to the wrong project.
+- Global Settings remain for application-wide preferences; project integration credentials and bindings are not configured there.
+
+**Catalog and authentication**
+- Show a searchable catalog grouped by tool purpose and category.
+- A platform detail view lists its supported operations, authentication methods, required scopes, data sent, status/test capability, and relevant usage/cost notes.
+- Offer API-key input only when that platform adapter supports API-key authentication. Other connectors may require OAuth, a provider token/PAT, or a local service endpoint.
+- Credentials are entered into a masked field. After save, never reveal the full credential.
+- Validate required fields and clearly explain format/authentication errors without echoing the secret.
+- New credentials are project-scoped by default. Reusing a credential from an owner/account vault requires explicit attach-to-project confirmation and a scope summary.
+
+**Test, status and usage**
+- Distinguish saving/configuring a credential from verifying that it works.
+- A safe Test Connection uses the adapter's documented non-mutating check where available; show its actual result, timestamp and latency when returned.
+- Check Status may refresh connection/auth/quota state only for fields the provider exposes.
+- If a provider has no safe health/status endpoint, state that testing/status is unsupported. Do not report Connected solely because a key was saved.
+- If a test requires a potentially billable generation or write request, separate it as Run Sample Request, state known cost/usage implications and require an explicit operator action.
+- Display quota, usage or credit balance only when the provider reports it. Otherwise show “Not reported by provider”.
+- Handle invalid credentials, missing scopes, expired OAuth, rate limits, quota exhaustion, network failure and provider outage with specific next steps.
+
+**Connection lifecycle**
+- Support Configure, Test Connection, Check Status, Enable/Disable for this project, Replace Credential, Reauthorize and Remove Project Binding.
+- Removing a project binding must not silently revoke a shared account-level credential used by other projects; ask separately before revoking the underlying credential too.
+- Only adapter-supported operations are available to agents. A successful connection test does not automatically grant all operations.
+
+### Tool invocation from project workflows
+- The chat/model/tool planner can use an integration only when it is configured, enabled for the active project, and allowed by the relevant permission policy.
+- The Activity timeline records platform/tool, operation, project scope, result/status and duration.
+- Activity and error details redact keys, authorization headers, sensitive query parameters and private payloads.
+- Failed tool calls do not appear as successful actions. Retry behavior follows provider adapter safe retry/idempotency rules.
+
+### GitHub and other scoped connectors
 - Show connected account/installation and repository selection scope.
 - Provide explicit disconnect/revoke path.
 - Do not imply that ChatGPT's external connector is the SDC Studio GitHub App.
@@ -171,6 +199,12 @@ Behavior:
 - Explain high-impact action approval boundaries.
 - Show project-specific overrides where supported.
 - Prevent ambiguous controls such as one switch labelled "unrestricted mode" that hides its actual permission effect.
+
+### Responsive behavior for integration management
+- Desktop: catalog/search on the left, selected platform configuration and test details in the main area, with status/permissions summary visible alongside when space allows.
+- Tablet: catalog becomes a selector/drawer; configuration and status share the main view.
+- Mobile: platform selection, credential/OAuth setup, test result and permission summary are separate full-width steps; never compress the API-key field or status text into narrow columns.
+- Keep the active project name visible throughout setup and confirmation.
 
 ## 11. Empty/loading/error state matrix
 
