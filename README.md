@@ -6,12 +6,12 @@ Private AI-powered software engineering platform for agency workflows. Multi-age
 
 - Phase 0 — Foundation: **accepted and merged**
 - Phase 1 — Documentation: **approved, merged and frozen** (PR #2)
-- Current phase: **Phase 2 — UI/UX Design**
-- Phase 2 status: **design specifications and design-agent architecture drafted; clickable prototype and approval pending**
-- Working branch: phase-2/ui-ux-design
+- Current phase: **Phase 3 — Application Shell**
+- Phase 2 status: **written design package accepted and merged; clickable prototype explicitly waived and deferred by owner**
+- Working branch: phase-3/application-shell
 - Default branch: main
-- Application implementation: not started
-- UI/UX design: design draft prepared; prototype/review pending
+- Application implementation: P3-01 repository/app bootstrap in progress
+- UI/UX design: written specifications accepted; P2-09 interactive prototype not created and remains deferred
 
 ## Approved foundation
 
@@ -19,7 +19,7 @@ See [Phase 0 Foundation](./PHASE-0-FOUNDATION.md) for product scope, the 10/10 l
 
 ## Current design work
 
-Phase 2 design draft: [PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3). See the [Phase 2 UI/UX Design Package](./design/README.md) for information architecture, user journeys, wireframes, visual design system, interactions, responsive behavior, design-agent integration architecture, and a detailed prototype design brief. The canonical prototype brief is ready for the connected Product Design app; the clickable prototype and owner approval remain pending.
+Phase 2 written design package: [PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3) — merged on 2026-11-27 (merge commit 07f9e0313bebb5ad604c9fd51f031a303edfc647). The owner accepted the written information architecture, journeys, wireframes, design system, interaction/responsive specifications, and design-agent architecture. The P2-09 clickable prototype was explicitly waived for this milestone and remains deferred; it was not created.
 
 ## Project documentation
 
@@ -33,7 +33,7 @@ Start at the [Documentation Index](./docs/README.md). It links the complete prod
 
 ## Phase policy
 
-Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Phase 1 documentation is approved and frozen. Phase 2 is design-only: do not begin application implementation until the owner approves the design deliverables.
+Work is phase-gated. Do not start the next phase until the current phase has been reviewed and accepted by the project owner. Phase 1 documentation is approved and frozen. Phase 2 written design specifications were accepted by the owner on 2026-11-27 with an explicit waiver of the clickable prototype; Phase 3 application-shell work is authorized. The prototype remains deferred and must not be described as completed.
 
 ## Repository safety
 
@@ -41,3 +41,17 @@ Work is phase-gated. Do not start the next phase until the current phase has bee
 - Work on task-specific branches and review diffs.
 - Do not force-push or rewrite shared history.
 - Do not commit credentials, API keys, tokens, or secret-bearing environment files.
+
+## Local development
+
+**Toolchain:** Node.js 24.x (Node.js 26.x is also within the supported engine range) and pnpm 12.19.0.
+
+```bash
+corepack enable
+corepack prepare pnpm@12.19.0 --activate
+pnpm install
+pnpm lint
+pnpm format:check
+```
+
+The initial P3-01 bootstrap does not yet include `pnpm-lock.yaml`. The first local `pnpm install` will generate it; commit that generated lockfile before treating installs as reproducible. The CI workflow currently uses `--no-frozen-lockfile` only as a temporary bootstrap step. Once the lockfile is committed, change CI to `pnpm install --frozen-lockfile`.

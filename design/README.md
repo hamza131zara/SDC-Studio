@@ -1,9 +1,9 @@
 # SDC Studio — Phase 2 UI/UX Design Package
 
 **Phase:** 2 — UI/UX Design  
-**Status:** Design draft for owner review  
-**Branch:** phase-2/ui-ux-design  
-**Review:** [Draft PR #3](https://github.com/hamza131zara/SDC-Studio/pull/3)  
+**Status:** Accepted written design package; owner-approved P2-09 prototype waiver recorded  
+**Branch:** phase-2/ui-ux-design (merged to main)  
+**Review:** [PR #3 — merged](https://github.com/hamza131zara/SDC-Studio/pull/3)  
 **Foundation:** Phase 0 and Phase 1 accepted and merged into main  
 **Boundary:** Design artifacts only. No application source code, backend implementation, AI provider integration, GitHub App implementation, runner, preview engine, or deployment code is part of this phase.
 
@@ -41,17 +41,17 @@ Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canoni
 
 | Work item | Status |
 |---|---|
-| P2-01 Information architecture | Draft prepared |
-| P2-02 Core user journeys | Draft prepared |
-| P2-03 Main application shell | Draft prepared |
-| P2-04 Chat experience | Draft prepared |
-| P2-05 Project workspace | Draft prepared |
-| P2-06 Execution transparency | Draft prepared |
-| P2-07 Settings and integrations | Project-scoped multi-tool/API management specified; prototype validation pending |
-| P2-08 Design system | Draft prepared; theme and density preference recorded |
-| P2-09 Interaction prototype | Canonical prototype brief prepared; interactive prototype pending |
-| P2-10 Design review and acceptance | Pending owner review |
-| P2-11 AI design workflow and integration architecture | Draft prepared; Product Design app workflow recorded |
+| P2-01 Information architecture | Accepted |
+| P2-02 Core user journeys | Accepted |
+| P2-03 Main application shell | Accepted |
+| P2-04 Chat experience | Accepted |
+| P2-05 Project workspace | Accepted |
+| P2-06 Execution transparency | Accepted |
+| P2-07 Settings and integrations | Accepted; prototype validation waived |
+| P2-08 Design system | Accepted; final brand/navigation polish deferred |
+| P2-09 Interaction prototype | **Waived by owner; deferred. Prototype not created.** |
+| P2-10 Design review and acceptance | **Accepted with recorded exception** |
+| P2-11 AI design workflow and integration architecture | Accepted; Product Design app workflow recorded |
 
 ## Confirmed owner preferences
 
@@ -59,14 +59,14 @@ Use [08-PROTOTYPE-DESIGN-BRIEF.md](./08-PROTOTYPE-DESIGN-BRIEF.md) as the canoni
 - Comfortable workspace density by default; Compact is optional and uses one global setting.
 - Theme and density are independent preferences.
 
-## Remaining design assumptions for review
+## Deferred visual refinements
 
 - Desktop-first composition because the primary workflow involves code, diffs, terminal, and preview side-by-side.
 - Responsive tablet/mobile support for conversation, task status, reports, and approvals; full multi-pane development is optimized for desktop.
 - Neutral visual foundation; final brand accent and logo can be aligned with SDC branding during owner review.
 - One operator-focused private product; no public signup, billing, team administration, or customer tenancy screens.
 
-These assumptions do not change the approved product scope. Owner feedback may adjust visual styling and layout within the existing product requirements.
+These refinements were not blockers for Phase 2 acceptance. They may be resolved during Phase 3 implementation without changing the approved product scope.
 
 ## Design-tool access and recommendation
 
@@ -79,13 +79,12 @@ These assumptions do not change the approved product scope. Owner feedback may a
 
 Full tool-access notes and references are in [07-DESIGN-AGENT-ARCHITECTURE.md](./07-DESIGN-AGENT-ARCHITECTURE.md).
 
-## Remaining Phase 2 work
+## Owner acceptance record — 2026-11-27
 
-- Connect Penpot MCP in a supported MCP client (or use Product Design in ChatGPT Work mode) and create the clickable prototype covering the primary journeys listed in the interaction specification, including Project Settings → Integrations & APIs for multi-platform connection setup, safe test/status checks and explicit sample API requests.
-- Review the provisional visual direction, final SDC brand accent/logo and workspace navigation choice with the owner.
-- Validate the complete design package against the acceptance checklist.
-- Record approved/deferred decisions and obtain owner acceptance.
+The owner accepted the written design package and authorized Phase 3. The editable clickable prototype (P2-09) was explicitly waived as a Phase 2 exit prerequisite. It has not been created and remains deferred; the written wireframes, journeys and interaction specifications are the current implementation reference. Final SDC brand accent/logo and workspace navigation polish may be refined during implementation.
 
-## Phase gate
+PR #3 was merged to main with commit 07f9e0313bebb5ad604c9fd51f031a303edfc647.
 
-Phase 2 is complete only after the owner reviews and accepts the design package. Phase 3 application shell implementation must not begin before this approval.
+## Phase handoff
+
+Phase 2 is closed with the exception above. Phase 3 application-shell work is authorized. Do not claim that the deferred clickable prototype exists.

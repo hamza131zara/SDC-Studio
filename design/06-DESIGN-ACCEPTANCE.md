@@ -1,6 +1,6 @@
 # SDC Studio — Phase 2 Design Acceptance Criteria
 
-**Status:** Draft  
+**Status:** Accepted with owner-approved exception  
 **Phase:** 2 — UI/UX Design  
 **Purpose:** Define objective completion conditions before Phase 3 application implementation may begin.
 
@@ -145,11 +145,12 @@ These are Phase 3 onward work items.
 
 ## 10. Phase approval record
 
-After owner review, record:
-- Approved design version.
-- Owner approval date.
-- Branch and pull request.
-- Merge commit SHA.
-- Accepted theme/brand decisions.
-- Deferred design items with reason.
-- Confirmation that Phase 3 — Application Shell may begin.
+**Owner acceptance:** 2026-11-27  
+**Accepted scope:** Written information architecture, user journeys, wireframes, visual design system, interaction/responsive specification, project integrations settings requirements, and AI design workflow/integration architecture.  
+**Branch / PR:** phase-2/ui-ux-design / PR #3  
+**Merge commit:** 07f9e0313bebb5ad604c9fd51f031a303edfc647  
+**Theme and density:** Both Light and Dark; follow OS preference initially and remember manual choice; Comfortable default with Compact optional.
+
+**Owner-approved exception:** The editable clickable prototype or equivalent interactive design handoff (P2-09) was waived as a Phase 2 exit prerequisite. It was not created and remains deferred. This is an explicit exception, not a completed prototype acceptance. Final SDC brand accent/logo and workspace navigation polish are deferred for implementation refinement.
+
+**Phase decision:** Phase 2 written design package accepted with the above exception. Phase 3 — Application Shell is authorized to begin using the written design documents as the implementation reference.
