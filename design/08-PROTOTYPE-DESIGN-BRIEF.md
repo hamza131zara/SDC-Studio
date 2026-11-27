@@ -50,7 +50,8 @@ Do not turn the product into a generic analytics dashboard. The chat and active 
 Create the following as separate editable frames/screens, not one flattened image.
 
 ### Screen 1 — Home / New Chat
-- Left navigation with SDC Studio identity, New Chat, New Project, recent chats, projects, integrations and settings.
+- Left navigation with SDC Studio identity, New Chat, New Project, recent chats, projects, and Global Settings.
+- When a project is open, expose Project Settings from the project header/menu; keep Integrations & APIs within that project settings route.
 - Centered chat composer with file/image attachment.
 - Separate selectors for Mode, Model and Autonomy.
 - Recent projects/conversations as secondary content.
