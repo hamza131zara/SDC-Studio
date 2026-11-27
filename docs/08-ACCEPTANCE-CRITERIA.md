@@ -178,3 +178,16 @@ When Phase 1 is approved, record:
 - Documentation version or baseline reference.
 - Accepted exceptions or deferred clarifications.
 - Confirmation that Phase 2 may begin.
+
+
+## 11. Phase 1 approval and merge record
+
+- **Phase:** 1 — Detailed Documentation
+- **Owner approval:** Received 2026-11-27.
+- **Pull request:** #2 — Phase 1: Complete SDC Studio project documentation
+- **Merged:** 2026-11-27
+- **Merge method:** Squash
+- **Merge commit:** b3ebadd4065400b4155c15469b016520a692d987
+- **Accepted deliverables:** 16 numbered documentation files, documentation index, updated root README, and approved Phase 0 foundation retained on main.
+- **Deferred implementation details:** Exact API routes, final SQL migrations, live provider/model configuration, GitHub App registration and permissions, runner profiles, preview routing, and hosting-provider-specific deployment behavior remain assigned to their implementation phases.
+- **Phase 2 authorization:** UI/UX Design may begin. Application implementation remains out of scope until Phase 2 is accepted.
