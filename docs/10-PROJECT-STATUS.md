@@ -14,7 +14,7 @@ This is the source of truth for project progress. Update it after meaningful cha
 **Phase 0:** Accepted and merged  
 **Phase 1:** Accepted, merged, and frozen  
 **Application implementation:** Not started  
-**UI/UX design:** Draft artifacts prepared; clickable prototype and owner review pending  
+**UI/UX design:** Design specifications and agent-design architecture prepared; clickable prototype and owner review pending  
 **Deployment:** Not started
 
 The repository contains the approved Phase 0 foundation and frozen Phase 1 documentation. Phase 2 design specifications are drafted on the active branch; the clickable prototype and owner acceptance remain pending. It does not yet contain a working application, backend, AI gateway, product GitHub App, runner, preview, QA engine, or deployment adapter.
@@ -38,8 +38,8 @@ The repository contains the approved Phase 0 foundation and frozen Phase 1 docum
 | Phase 2 branch | phase-2/ui-ux-design |
 | Phase 2 PR | #3 — open, draft, not merged |
 | Phase 2 PR base | main |
-| Phase 2 changed files | 11 at latest PR check |
-| Phase 2 PR head | Dynamic; verify the current branch/PR head from GitHub before any subsequent write |
+| Phase 2 changed files | Recheck live PR #3 changed-file count |
+| Phase 2 PR head | Dynamic; verify current branch/PR head from GitHub before subsequent writes |
 
 The Phase 0 merge SHA is immutable historical evidence. Phase 1 branch head, ahead/behind counts, changed-file count, checks, and mergeability are changing GitHub state; retrieve them from GitHub before the next operation.
 
@@ -125,21 +125,24 @@ All items below were accepted and merged to main through PR #2 on 2026-11-27. Th
 | P2-05 — Project workspace | Draft prepared | Files, Changes, Preview, Terminal, QA, Activity and Reports surfaces specified |
 | P2-06 — Execution transparency | Draft prepared | Activity, task plan, tool event and approval screens specified |
 | P2-07 — Settings and integrations | Draft prepared | Integrations and Settings screens specified |
-| P2-08 — Design system | Draft prepared | design/04-DESIGN-SYSTEM.md; exact brand accent remains provisional |
+| P2-08 — Design system | Draft prepared | Both themes; remember last manual selection; Comfortable default, Compact optional; brand accent remains provisional |
 | P2-09 — Interaction prototype | **Pending** | Clickable prototype covering primary user journeys has not yet been created |
 | P2-10 — Design review and acceptance | **Pending owner review** | Owner reviews design package and approves or requests corrections |
+| P2-11 — AI design workflow and integration architecture | Draft prepared | design/07-DESIGN-AGENT-ARCHITECTURE.md; architecture review pending |
 
-### Current design assumptions
+### Current design decisions and assumptions
 
-- Desktop-first developer workspace.
-- Dark neutral theme proposed as default, with light theme variant.
-- Final SDC logo/accent and density preference await owner confirmation.
-- Responsive tablet/mobile design is included.
+- Desktop-first developer workspace with responsive tablet/mobile behavior.
+- Both Light and Dark themes are available; first visit follows OS preference, then the app remembers the last manual selection.
+- Comfortable density is the default; Compact is optional.
+- Final SDC logo/accent remains provisional.
+- Figma and Canva connectors are available in ChatGPT; current Figma account access is View/Starter, so canvas writing is not assumed available. Penpot is the free/open-source alternative to evaluate.
+- Product Design and MagicPath are available to connect as external design/prototyping aids; neither is yet a confirmed SDC Studio runtime dependency.
 - No application code or functional integrations are part of Phase 2.
 
 ## 8. Current next action
 
-**Immediate next action:** Review the Phase 2 design draft, confirm or adjust the visual direction (dark/light default, brand accent, density), then complete the clickable prototype and design review. Do not start Phase 3 application implementation until the owner approves the complete design package.
+**Immediate next action:** Complete the clickable prototype for the primary user journeys, review the new AI design workflow/integration architecture, confirm the remaining brand accent/logo direction, then prepare the Phase 2 design package for owner acceptance. Do not start Phase 3 application implementation until the owner approves the complete design package.
 
 Do not:
 - Start Phase 3 application implementation before Phase 2 design approval.
@@ -189,6 +192,9 @@ These details are deferred intentionally and must be added to the relevant imple
 | 2026-11-27 | Phase 2 design PR #3 opened as draft | Design specifications only; P2-09 clickable prototype remains pending |
 | 2026-11-27 | Phase 2 information architecture, journeys, screen wireframes, design system and responsive interaction specs drafted | design/01 through design/06 |
 | 2026-11-27 | Clickable prototype remains pending | P2-09 |
+| 2026-11-27 | Owner selected both themes with last manual choice remembered and Comfortable density by default | design/04-DESIGN-SYSTEM.md |
+| 2026-11-27 | AI design workflow and Figma/Penpot integration architecture drafted | design/07-DESIGN-AGENT-ARCHITECTURE.md |
+| 2026-11-27 | Product Design and MagicPath surfaced for optional ChatGPT connection | External design aids; not connected/confirmed yet |
 
 ## 12. Status maintenance procedure
 
